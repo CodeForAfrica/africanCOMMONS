@@ -10,4 +10,5 @@ AfricanCOMMONS is a platform to showcase re-useable tools built across Africa an
 
 ### Attributions
 
-- Minimal Universal Theme icons made by [Freepik](http://www.freepik.com/) from [www.flaticon.com](http://www.flaticon.com/)
+- Icon by [Freepik](http://www.freepik.com/) from [www.flaticon.com](http://www.flaticon.com/)
+- Icons by [Eucalyp](http://www.flaticon.com/authors/eucalyp) from [www.flaticon.com](http://www.flaticon.com/)
