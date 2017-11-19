@@ -54,16 +54,14 @@ body_class: home
     <h1 class="mb-2">Project Showcase</h1>
     <p class="lead mb-4">A sample of the projects</p>
 
-    <div class="row text-left">
-      {% for project in site.data.projects %}
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="/img/earth.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+    <div class="card-deck text-left">
+      {% for project in site.data.projects limit:3 %}
+        <div class="card">
+          <img class="card-img-top" src="{{ site.base_url }}/img/earth.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">{{ project.Name }}</h4>
+            <p class="card-text">{{ project.Description }}</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       {% endfor %}
@@ -104,19 +102,17 @@ body_class: home
   <div class="container">
     <h1 class="text-center">Patterns</h1>
     <p class="lead text-center">Civic patterns...</p>
-    <div class="row mt-3">
-      {% for patterns in site.data.patterns %}
-        <div class="col-sm-3">
-          <div class="card text-white bg-primary mb-3">
-            <div class="card-body pt-5">
-              <h4 class="card-title">Primary card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <div class="card-footer text-muted text-white">
-              <a href="#" class="btn btn-sm btn-outline-light mr-auto"><i class="fa fa-thumbs-up fa-fw"></i></a>
-              <a href="#" class="btn btn-sm btn-outline-light"><i class="fa fa-twitter fa-fw"></i></a>
-              <a href="#" class="btn btn-sm btn-outline-light"><i class="fa fa-facebook fa-fw"></i></a>
-            </div>
+    <div class="card-deck mt-3">
+      {% for pattern in site.data.patterns limit:4 %}
+        <div class="card text-white bg-primary mb-3 pt-1">
+          <div class="card-body pt-5 justify-content-end">
+            <h4 class="card-title mt-auto">{{ pattern.title }}</h4>
+            <p class="card-text">{{ pattern.tagline }}</p>
+          </div>
+          <div class="card-footer text-muted text-white">
+            <a href="#" class="btn btn-sm btn-outline-light mr-auto"><i class="fa fa-thumbs-up fa-fw"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light"><i class="fa fa-twitter fa-fw"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light"><i class="fa fa-facebook fa-fw"></i></a>
           </div>
         </div>
       {% endfor %}
@@ -131,6 +127,6 @@ body_class: home
   <p class="mb-4">This project has been made possible thanks to these fine organizations:</p>
 
   {% for partner in site.data.partners %}
-    <a href="{{ partner.url }}" class="m-1 p-1" target="_blank" rel="noopener"><img src="{{ partner.img }}"></a>
+    <a href="{{ partner.url | prepend: site.base_url }}" class="m-1 p-1" target="_blank" rel="noopener"><img src="{{ partner.img | prepend: site.base_url }}"></a>
   {% endfor %}
 </div>

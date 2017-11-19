@@ -8,3 +8,8 @@ blog_url: https://medium.com/code-for-africa
 github_url: https://github.com/CodeForAfrica/AfricanCOMMONS
 
 google_analytics: UA-44795600-36
+
+
+# Setup Configs
+permalink: pretty
+source: src

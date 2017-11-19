@@ -1,0 +1,47 @@
+- title: Define Failure
+  tagline: >
+      Define what failure looks like at the start of a project.
+  tags:
+      - workflow
+      - failure
+  related:
+      - Kill Switch
+      - Measure The Right Things
+  category: Delivery
+  stub: true
+
+- title: Correlation Isn't Causation
+  tagline: >
+      Correlation doesn't equal causation, so make sure you have further research so you don't lead people astray.
+  tags:
+      - audience
+  category: Delivery
+  credits:
+      label: Correlation = Causation (Code for America)
+      url: https://github.com/codeforamerica/civic-tech-patterns
+
+- title: Content Before Engineering
+  tagline: >
+      Can you explain a process so that people really understand it well before you build the system to contain the process?
+  tags:
+      - workflow
+      - imagination
+  opposite:
+      - Don't Pretend You're The Government
+  category: Delivery
+  stub: true
+  credits:
+      label: Content Before Engineering (Code for America)
+      url: https://github.com/codeforamerica/civic-tech-patterns#content-before-engineering
+
+- title: Faster Horses
+  tagline: >
+      People, when asked what they want out of a project, will optimize
+      their existing workflow instead of inventing a new one.
+  category: Delivery
+  tags:
+      - imagination
+  related:
+      - Eliminate Your Job
+      - Clean Room
+  stub: true
