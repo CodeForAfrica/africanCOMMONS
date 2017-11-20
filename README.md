@@ -23,8 +23,24 @@ To install the yarn requirements;
 yarn install
 ```
 
+### Development
 
-### Data Import
+From inside the root directory;
+
+1. Serve using Jekyll;
+```sh
+$ jekyll s
+```
+
+2. On a separate terminal window, watch for JS/CSS changes using Webpack;
+```sh
+$ yarn run watch
+```
+
+<!-- TODO: Figure out live-reloading -->
+
+
+### Data Update/Import
 
 To update the projects:
 
@@ -32,7 +48,7 @@ To update the projects:
 $ curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=0&single=true&output=csv" > src/_data/projects.csv
 ```
 
-### Contributing
+## Contributing
 
 TODO
 
