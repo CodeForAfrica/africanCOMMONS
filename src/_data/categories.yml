@@ -10,9 +10,7 @@
   - title: Health
     description: Used to aid delivery of vital health services and provide citizens with knowledge of health service providers such as Code for Tanzania's Hospital Locator.
   - title: Election Tools
-    description: Monitor elections and promote citizen feedback
-  - title: Fiscal Tools
-    description: Probably could fall under ‘Governance’ tools?
+    description: Monitor elections and promote citizen feedback like GoToVote which was used in Malawi's 2014 general election.
   - title: News/ Journalistic Tools
     description: Tools used to promote citizen reporting, and fact checking/ verification of news information. An example is Code for Africa's Citizen Reporter mobile app.
 
