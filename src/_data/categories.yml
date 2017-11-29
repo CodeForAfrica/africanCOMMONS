@@ -1,33 +1,33 @@
 - projects:
   - title: First Response / Crisis
-    description: These are tools developed for use in humanitarian disasters, emergency and/or crisis situations to deploy data collection to the field instantly.
+    description: These are tools developed for use in humanitarian disasters, emergency and/or crisis situations to deploy data collection to the field instantly such as Flood Aid Salone from Code for Sierra Leone. 
   - title: Service Delivery
-    description: Ensure services are delivered efficiently where they are needed most. 
+    description: Ensure services are delivered efficiently where they are needed most such as MWash by Code for Sierra Leone.
   - title: Governance
-    description: Tools that promote citizen feedback and government accountability.
+    description: Tools that promote citizen feedback and government accountability like BudgIt used in Nigeria, Sierra Leone, and Ghana.
   - title: Environment
-    description: Tools used to map for risk and monitor change for environmental change.
+    description: Tools used to map for risk and monitor change for environmental change similar to Code for Africa's Climate Change Projections.
   - title: Health
-    description: Used to aid delivery of vital health services and provide citizens with knowledge of health service providers.
+    description: Used to aid delivery of vital health services and provide citizens with knowledge of health service providers such as Code for Tanzania's Hospital Locator.
   - title: Election Tools
     description: Monitor elections and promote citizen feedback
   - title: Fiscal Tools
     description: Probably could fall under ‘Governance’ tools?
   - title: News/ Journalistic Tools
-    description: Tools used to promote citizen reporting, and fact checking/ verification of news information.
+    description: Tools used to promote citizen reporting, and fact checking/ verification of news information. An example is Code for Africa's Citizen Reporter mobile app.
 
 - organisations:
   - title: Government
     description: Governments that have created tools for their citizens to easily access information. 
   - title: Media
-    description: Media entities that have created tools for their citizens to easily access information. 
+    description: Media entities that have created tools for their citizens to easily access information such as The Star Newspapers Health Tools in Kenya. 
   - title: ICT
-    description: ICT- related organizations that have created tools for their citizens to easily access information.
+    description: Information Technology-related organizations that have created tools for their citizens to easily access information.
   - title: Civil Society
     description: Private citizens/communities that have created tools for their citizens to easily access information.
   - title: Multinational
-    description: Several countries or individuals from several countries that have created tools for citizens from several countries to easily access information.
+    description: Bodies or organisations such as the World Bank that operate in several countries to support the development tools for citizens to easily access information.
   - title: Not-for-profit
-    description: Non-business related organizations that have created tools for citizens from their country to easily access information.
+    description: Non-business related organizations like Code for Nigeria, Tanzania's dLab and others that have created tools for citizens from their country to easily access information and participate as 'change agents'.
   - title: Educational 
-    description: Educational institutions like universities that have created tools for citizens from their country to easily access information.
+    description: Educational institutions like universities or groups such as Tanzania's ShuleDirect that have created tools for citizens and school-going children to easily access educational information.
