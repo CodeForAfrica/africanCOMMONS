@@ -1,0 +1,33 @@
+- projects:
+  - title: First Response / Crisis
+    description: These are tools developed for use in humanitarian disasters, emergency and/or crisis situations to deploy data collection to the field instantly
+  - title: Service Delivery
+    description: Ensure services are delivered efficiently where they are needed most. 
+  - title: Governance
+    description: Tools that promote citizen feedback and government accountability.
+  - title: Environment
+    description: Tools used to map for risk and monitor change for environmental change.
+  - title: Health
+    description: Used to aid delivery of vital health services and provide citizens with knowledge of health service providers.
+  - title: Election Tools
+    description: Monitor elections and promote citizen feedback
+  - title: Fiscal Tools
+    description: Probably could fall under ‘Governance’ tools?
+  - title: News/ Journalistic Tools
+    description: Tools used to promote citizen reporting, and fact checking/ verification of news information.
+
+- organisations:
+  - title: Government
+    description: Governments that have created tools for their citizens to easily access information. 
+  - title: Media
+    description: Media entities that have created tools for their citizens to easily access information. 
+  - title: ICT
+    description: ICT- related organizations that have created tools for their citizens to easily access information.
+  - title: Civil Society
+    description: Private citizens/communities that have created tools for their citizens to easily access information.
+  - title: Multinational
+    description: Several countries or individuals from several countries that have created tools for citizens from several countries to easily access information.
+  - title: Not-for-profit
+    description: Non-business related organizations that have created tools for citizens from their country to easily access information.
+  - title: Educational 
+    description: Educational institutions like universities that have created tools for citizens from their country to easily access information.
