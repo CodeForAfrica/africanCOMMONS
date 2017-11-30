@@ -5,13 +5,18 @@ var Papa = require('papaparse')
 var utils = require('./utils')
 
 var args = process.argv.slice(2);
-if (args[0] == '--download') {
-  download()
-} else {
-  create_projects()
+switch (args[0]) {
+  case '--download':
+    download()
+    break
+  case '--publish':
+    publish()
+    break
+  default:
+    create_projects()
 }
 
-// 
+
 
 // Download the datas
 function download() {
@@ -74,6 +79,13 @@ function create_projects() {
 }
 
 
-
-
+// Publish to gh-pages
+function publish() {
+  console.log('Starting Github Pages publish...')
+  var ghpages = require('gh-pages')
+  ghpages.publish('src', function(err) {
+    if (err) throw err
+    console.log('Completed Github pages publish.')
+  });
+}
 
