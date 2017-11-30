@@ -1,0 +1,132 @@
+---
+layout: default
+body_class: home
+---
+
+<div class="jumbotron jumbotron-fluid bg-primary text-light mb-0">
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col">
+        <h1 class="display-4">AfricanCOMMONS</h1>
+        <p class="lead">A platform to showcase re-useable tools built across Africa and the people &amp; organisations building them.</p>
+        <!-- <p class="lead">
+          <a class="btn btn-outline-light btn-lg" href="/about" role="button">Learn more...</a>
+        </p> -->
+      </div>
+      <div class="col col-lg-3 col-md-4">
+        <div class="list-group font-headings my-2">
+          <a href="/projects" class="list-group-item list-group-item-action">
+            Projects
+            <i class="fa fa-caret-right pull-right mt-1"></i>
+          </a>
+          <a href="/organisations" class="list-group-item list-group-item-action">
+            Organisations
+            <i class="fa fa-caret-right pull-right mt-1"></i>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            People
+            <i class="fa fa-caret-right pull-right mt-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<!-- MAP -->
+<div style="height: 400px; background-color: #000;">
+  
+</div>
+
+<div class="py-5 container text-center">
+  <h1>Contribute</h1>
+  <p class="lead">Add your project...</p>
+  <p>
+    <a class="btn btn-lg btn-outline-primary mr-3 my-1" style="min-width: 200px;" href="#">+ Add Project</a>
+    <a class="btn btn-lg btn-outline-dark ml-3 my-1" style="min-width: 200px;" href="#">+ Add Organization</a>
+  </p>
+</div>
+
+<div class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="mb-2">Project Showcase</h1>
+    <p class="lead mb-4">A sample of the projects</p>
+
+    <div class="card-deck text-left">
+      {% for project in site.projects limit:3 %}
+        <div class="card">
+          <img class="card-img-top" src="{{ site.base_url }}/img/earth.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">{{ project.title }}</h4>
+            <p class="card-text">{{ project.description }}</p>
+            <a href="{{ project.url }}" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <p class="mt-5 mb-1">
+      <a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="/projects">Browse all the projects</a>
+    </p>
+  </div>
+</div>
+
+<div class="bg-primary text-light py-5">
+  <div class="container">
+    <div class="row justify-content-sm-center align-items-center">
+      <div class="col-sm-7">
+        <h1>Never miss an update.</h1>
+        <p>Sign up for our newsletter to receive weekly updates, special reports and featured insights as we cover one of the most critical issues of our time.</p>
+      </div>
+
+      <div class="col-sm-4">
+        
+        <form action="https://codeforafrica.us6.list-manage.com/subscribe/post?u=65e5825507b3cec760f272e79&amp;id=377eacc4b1" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+            <div class="form-group">
+              <input type="email" value="" name="EMAIL" class="form-control text-center" placeholder="Email address" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_65e5825507b3cec760f272e79_377eacc4b1" tabindex="-1" value=""></div>
+              
+            </div>
+            <button type="submit" class="btn btn-block btn-light"><i class="fa fa-check"></i> Subscribe</button>
+        </form>
+
+        <!--End mc_embed_signup-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-light py-5">
+  <div class="container">
+    <h1 class="text-center">Patterns</h1>
+    <p class="lead text-center">Civic patterns...</p>
+    <div class="card-deck mt-3">
+      {% for pattern in site.data.patterns limit:4 %}
+        <div class="card text-white bg-primary mb-3 pt-1">
+          <div class="card-body pt-5 justify-content-end">
+            <h4 class="card-title mt-auto">{{ pattern.title }}</h4>
+            <p class="card-text">{{ pattern.tagline }}</p>
+          </div>
+          <div class="card-footer text-muted text-white">
+            <a href="#" class="btn btn-sm btn-outline-light mr-auto"><i class="fa fa-thumbs-up fa-fw"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light"><i class="fa fa-twitter fa-fw"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light"><i class="fa fa-facebook fa-fw"></i></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <p class="text-center mt-3 mb-1"><a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="/patterns">View all patterns...</a></p>
+  </div>
+</div>
+
+<div class="py-5 container text-center partner-logos">
+  <h1>Partners</h1>
+  <p class="mb-4">This project has been made possible thanks to these fine organizations:</p>
+
+  {% for partner in site.data.partners %}
+    <a href="{{ partner.url | prepend: site.base_url }}" class="m-1 p-1" target="_blank" rel="noopener"><img src="{{ partner.img | prepend: site.base_url }}"></a>
+  {% endfor %}
+</div>

@@ -1,0 +1,50 @@
+{
+  "name": "africancommons",
+  "version": "1.0.0",
+  "description": "A platform to showcase re-useable tools built across Africa and the people & organizations building them.",
+  "main": "webpack/js/main.js",
+  "bin": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --optimize-minimize -p",
+    "watch": "webpack --progress --optimize-minimize --watch",
+    "serve": "webpack-dev-server --open",
+    "projects": "node bin/projects.js"
+  },
+  "repository": "git+https://github.com/CodeForAfricaLabs/AfricanCOMMONS.git",
+  "keywords": [
+    "commons",
+    "africa",
+    "github"
+  ],
+  "author": "Code for Africa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeForAfricaLabs/AfricanCOMMONS/issues"
+  },
+  "homepage": "https://commons.africa/",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "download-file": "^0.1.5",
+    "file-loader": "^1.1.5",
+    "font-awesome": "^4.7.0",
+    "fs-extra": "^4.0.2",
+    "jquery": "^1.9.1",
+    "lunr": "^2.1.4",
+    "papaparse": "^4.3.6",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "node-sass": "^4.7.1",
+    "postcss-loader": "^2.0.8",
+    "precss": "^2.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  }
+}

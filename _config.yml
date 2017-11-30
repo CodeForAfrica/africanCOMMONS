@@ -1,7 +1,29 @@
 title: AfricanCOMMONS
 description: A platform to showcase re-useable tools built across Africa and the people & organizations building them.
 
-url: https://africancommons.net
-enforce_ssl: africancommons.net
+url: https://commons.africa
+enforce_ssl: commons.africa
+
+blog_url: https://medium.com/code-for-africa
+github_url: https://github.com/CodeForAfrica/AfricanCOMMONS
 
 google_analytics: UA-44795600-36
+
+project_add_url: https://docs.google.com/spreadsheets/d/1GykfqSTxxhXbzszjOrBFuWNruqDXBNiDQNHNpT8Mn4k/edit#gid=0
+
+
+# Setup Configs
+permalink: pretty
+source: src
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name
+  organizations:
+    output: true
+    permalink: /:collection/:name
+  patterns:
+    output: true
+    permalink: /:collection/:name
