@@ -29,18 +29,13 @@ From inside the root directory;
 
 1. Serve using Jekyll;
 ```sh
-$ jekyll s
+$ jekyll s -s src
 ```
 
 2. On a separate terminal window, watch for JS/CSS changes using Webpack;
 ```sh
 $ yarn run watch
 ```
-
-
-3. Install 
-
-<!-- TODO: Figure out live-reloading -->
 
 
 ### Data Update/Import
@@ -52,6 +47,15 @@ $ yarn run projects --download
 ```
 
 If you don't want to download, can leave out the `--download` flag/argument.
+
+
+## Deployment
+
+Currently we deploy using [Github pages](http://pages.github.com/). To publish, run:
+
+```sh
+$ yarn run projects --publish
+```
 
 ## Contributing
 

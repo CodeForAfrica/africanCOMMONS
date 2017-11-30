@@ -14,7 +14,6 @@ project_add_url: https://docs.google.com/spreadsheets/d/1GykfqSTxxhXbzszjOrBFuWN
 
 # Setup Configs
 permalink: pretty
-source: src
 
 # Collections
 collections:
