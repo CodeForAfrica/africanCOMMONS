@@ -1,31 +1,31 @@
 - projects:
   - title: First Response / Crisis
-    description: These are tools developed for use in humanitarian disasters, emergency and/or crisis situations to deploy data collection to the field instantly such as Flood Aid Salone from Code for Sierra Leone. 
+    description: These are tools developed for use in humanitarian disasters, emergency and/or crisis situations to deploy data collection to the field instantly e.g [Flood Aid Salone](https://github.com/Code4SierraLeone/floodaidsalone-platform-api) from Code for Sierra Leone. 
   - title: Service Delivery
-    description: Ensure services are delivered efficiently where they are needed most such as MWash by Code for Sierra Leone.
+    description: Ensure services are delivered efficiently where they are needed most e.g [YamaYama](https://yamayama.codefornigeria.org) by Code for Nigeria.
   - title: Governance
-    description: Tools that promote citizen feedback and government accountability like BudgIt used in Nigeria, Sierra Leone, and Ghana.
+    description: Tools that promote citizen feedback and government accountability e.g [BudgIt](http://yourbudgit.com) used in Nigeria, Sierra Leone, and Ghana.
   - title: Environment
-    description: Tools used to map for risk and monitor change for environmental change similar to Code for Africa's Climate Change Projections.
+    description: Tools used to map for risk and monitor change for environmental change e.g [Code for Africa's Climate Change Projections](https://climatechange.codeforafrica.org/map.html).
   - title: Health
-    description: Used to aid delivery of vital health services and provide citizens with knowledge of health service providers such as Code for Tanzania's Hospital Locator.
+    description: Used to aid delivery of vital health services and provide citizens with knowledge of health service providers e.g Code for Tanzania's [Hospital Locator](http://htools-tz-health-facilities.dokku-1.codefortanzania.org).
   - title: Election Tools
-    description: Monitor elections and promote citizen feedback like GoToVote which was used in Malawi's 2014 general election.
+    description: Monitor elections and promote citizen feedback e.g [GotToVote](https://gottovote.cc) which was used in Malawi's 2014 general election.
   - title: News/ Journalistic Tools
-    description: Tools used to promote citizen reporting, and fact checking/ verification of news information. An example is Code for Africa's Citizen Reporter mobile app.
+    description: Tools used to promote citizen reporting, and fact checking/ verification of news information e.g Code for Africa's [Citizen Reporter](http://citizenreporter.codeforafrica.net) mobile app.
 
 - organisations:
   - title: Government
-    description: Governments that have created tools for their citizens to easily access information. 
+    description: Governments that have created tools for their citizens to easily access information e.g Tanzania's Government [Open Data Portal](http://www.opendata.go.tz). 
   - title: Media
-    description: Media entities that have created tools for their citizens to easily access information such as The Star Newspapers Health Tools in Kenya. 
+    description: Media entities that have created tools for their citizens to easily access information e.g The Star Newspapers [Health Tools](https://health.the-star.co.ke) in Kenya. 
   - title: ICT
     description: Information Technology-related organizations that have created tools for their citizens to easily access information.
   - title: Civil Society
     description: Private citizens/communities that have created tools for their citizens to easily access information.
   - title: Multinational
-    description: Bodies or organisations such as the World Bank that operate in several countries to support the development tools for citizens to easily access information.
+    description: Bodies or organisations that operate in several countries to support the development tools for citizens to easily access information e.g [The World Bank](http://www.worldbank.org).
   - title: Not-for-profit
-    description: Non-business related organizations like Code for Nigeria, Tanzania's dLab and others that have created tools for citizens from their country to easily access information and participate as 'change agents'.
+    description: Non-business related organizations and others that have created tools for citizens from their country to easily access information and participate as 'change agents' e.g [Code for Nigeria](https://codefornigeria.org) and Tanzania's [dLab](http://dlab.or.tz).
   - title: Educational 
-    description: Educational institutions like universities or groups such as Tanzania's ShuleDirect that have created tools for citizens and school-going children to easily access educational information.
+    description: Educational institutions like universities or groups that have created tools for citizens and school-going children to easily access educational information e.g Tanzania's [ShuleDirect](https://www.shuledirect.co.tz). 
