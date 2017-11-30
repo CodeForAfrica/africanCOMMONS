@@ -1,0 +1,15 @@
+- name: World Bank
+  url: https://worldbank.org
+  img: /img/logos/worldbank.png
+
+- name: ICFJ
+  url: https://icfj.org
+  img: /img/logos/icfj-long.png
+
+- name: Code for Tanzania
+  url: https://codefortanzania.org/
+  img: /img/logos/cftanzania.png
+
+- name: Hacks Hackers Africa
+  url: https://facebook.com/HacksHackersAfrica
+  img: /img/logos/hha.jpg
