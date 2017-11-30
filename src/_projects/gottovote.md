@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: GotToVote
-country: Kenya
+countries: Kenya
+category: Governance
 site_url: https://gottovote.cc
 github_url: https://github.com/CodeForAfrica/GotToVote
 related: 

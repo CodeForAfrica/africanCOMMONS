@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: OpenELIS
-country: Cote d'Ivoire, Kenya
+countries: Cote d'Ivoire, Kenya
+category: 
 site_url: http://www.openelis.org
 github_url: https://github.com/openelisglobal
 related: 

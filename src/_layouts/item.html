@@ -1,0 +1,118 @@
+---
+layout: default
+---
+
+<div class="bg-secondary py-2 text-light">
+  <div class="container">
+    <a href="/projects#all" class="btn text-light">
+      <i class="fa fa-chevron-left mr-1"></i> All projects
+    </a>
+  </div>
+</div>
+
+<section class="content">
+  <div class="container py-5">
+
+    <div class="row">
+      <div class="col-8">
+        <div class="media">
+          <img class="align-self-start mr-3 p-2" src="/img/icons/robot.svg" alt="Generic placeholder image">
+          <div class="media-body">
+            <h2 class="mt-0 d-flex justify-content-between">
+              {{ page.title }}
+              <span><a href="#" class="ml-2 btn btn-sm btn-outline-primary">
+                Category
+              </a></span>
+            </h2>
+            <p>Countries: {{ page.countries }}</p>
+            <p>{{ page.description }}</p>
+
+          </div>
+        </div>
+        
+
+        <h4 class="mt-5">Related Projects</h4>
+        <hr>
+
+        {% if page.related == nil %}
+          <div class="text-muted text-center">
+            <p><i>No related projects.<br/>
+              <small>Help us by <a href="{{ site.project_add_url }}" target="_blank" rel="noopener">adding projects</a> that might be related.</small></i>
+            </p>
+          </div>
+        {% endif %}
+
+
+        <hr class="my-4">
+
+        <div id="disqus_thread"></div>
+      </div> <!-- /.col-9 -->
+
+      <div class="col-4 links">
+        <div class="list-group mb-3">
+          <a href="{{ page.site_url }}" target="_blank" rel="noopener" class="list-group-item list-group-item-action flex-column align-items-center">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+              <div class="d-flex flex-row align-items-center text-truncate">
+                <i class="fa fa-globe fa-2x mr-3"></i>
+                <div>
+                  <p class="mb-0 font-headings text-truncate">Website</p>
+                  <small class="text-muted text-truncate">{{ page.site_url }}</small>
+                </div>
+              </div>
+             
+              <i class="fa fa-angle-right fa-2x ml-2"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="list-group mb-4">
+          <a href="{{ page.github_url }}" target="_blank" rel="noopener" class="list-group-item list-group-item-action flex-column align-items-center">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+              <div class="d-flex flex-row align-items-center text-truncate">
+                <i class="fa fa-github fa-2x mr-3"></i>
+                <div class="text-truncate">
+                  <p class="mb-0 font-headings text-truncate">Github</p>
+                  <small class="text-muted">{{ page.github_url }} Test</small>
+                </div>
+              </div>
+              <i class="fa fa-angle-right fa-2x ml-2"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- <hr>
+        <h5 class="font-headings text-center">Social</h5>
+        <p class="text-center">
+          <a href="{{ page.twitter_url }}" target="_blank" class="mx-1"><i class="fa fa-fw fa-twitter fa-lg"></i></a>
+          <a href="{{ page.facebook_url }}" target="_blank" class="mx-1"><i class="fa fa-fw fa-facebook fa-lg"></i></a>
+          <a href="{{ page.medium_url }}" target="_blank" class="mx-1"><i class="fa fa-fw fa-medium fa-lg"></i></a>
+        </p> -->
+      </div>
+
+    </div>
+
+    
+
+  </div> <!-- /.container -->
+</section> <!-- /.content -->
+
+
+
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://africancommons.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

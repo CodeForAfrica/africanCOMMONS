@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: afriLEAKS
-country: Kenya
+countries: Kenya
+category: News
 site_url: https://afrileaks.org
 github_url: https://github.com/CodeForAfrica/afriLEAKS-website
 related: 

@@ -1,4 +1,4 @@
-- projects:
+projects:
   - title: First Response / Crisis
     description: These are tools developed for use in humanitarian disasters, emergency and/or crisis situations to deploy data collection to the field instantly e.g [Flood Aid Salone](https://github.com/Code4SierraLeone/floodaidsalone-platform-api) from Code for Sierra Leone. 
   - title: Service Delivery
@@ -14,7 +14,7 @@
   - title: News/ Journalistic Tools
     description: Tools used to promote citizen reporting, and fact checking/ verification of news information e.g Code for Africa's [Citizen Reporter](http://citizenreporter.codeforafrica.net) mobile app.
 
-- organisations:
+organisations:
   - title: Government
     description: Governments that have created tools for their citizens to easily access information e.g Tanzania's Government [Open Data Portal](http://www.opendata.go.tz). 
   - title: Media

@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: TaxClock
-country: Kenya, South Africa, Tanzania
+countries: Kenya, South Africa, Tanzania
+category: 
 site_url: https://taxclock.codeforkenya.org
 github_url: https://github.com/CodeForAfrica/TaxClock
 related: 

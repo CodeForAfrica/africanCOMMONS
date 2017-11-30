@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Solve Cholera
-country: Sierra Leone
+countries: Sierra Leone
+category: 
 site_url: 
 github_url: https://github.com/Code4SierraLeone/SolveCholera-Web
 related: https://github.com/Code4SierraLeone/SolveCholera-AI

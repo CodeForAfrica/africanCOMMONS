@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: gazetiAFRICA
-country: Kenya, Nigeria, Sierra Leone
+countries: Kenya, Nigeria, Sierra Leone
+category: 
 site_url: https://gazeti.africa
 github_url: https://github.com/gazeti/gazeti.AFRICA
 related: 

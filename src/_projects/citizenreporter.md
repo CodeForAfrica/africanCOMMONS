@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: CitizenReporter
-country: Kenya
+countries: Kenya
+category: News
 site_url: http://citizenreporter.codeforafrica.net
 github_url: https://github.com/CodeForAfrica/CitizenReporter-Android
 related: 

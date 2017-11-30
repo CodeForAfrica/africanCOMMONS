@@ -2,12 +2,14 @@
   "name": "africancommons",
   "version": "1.0.0",
   "description": "A platform to showcase re-useable tools built across Africa and the people & organizations building them.",
-  "main": "src/_js/main.js",
+  "main": "webpack/js/main.js",
+  "bin": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --progress --optimize-minimize -p",
     "watch": "webpack --progress --optimize-minimize --watch",
-    "serve": "webpack-dev-server --open"
+    "serve": "webpack-dev-server --open",
+    "projects": "node bin/projects.js"
   },
   "repository": "git+https://github.com/CodeForAfricaLabs/AfricanCOMMONS.git",
   "keywords": [
@@ -23,8 +25,10 @@
   "homepage": "https://commons.africa/",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
+    "download-file": "^0.1.5",
     "file-loader": "^1.1.5",
     "font-awesome": "^4.7.0",
+    "fs-extra": "^4.0.2",
     "jquery": "^1.9.1",
     "lunr": "^2.1.4",
     "papaparse": "^4.3.6",

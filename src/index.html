@@ -8,19 +8,19 @@ body_class: home
     <div class="row align-items-end">
       <div class="col">
         <h1 class="display-4">AfricanCOMMONS</h1>
-        <p class="lead">A platform to showcase re-useable tools built across Africa and the people &amp; organizations building them.</p>
+        <p class="lead">A platform to showcase re-useable tools built across Africa and the people &amp; organisations building them.</p>
         <!-- <p class="lead">
           <a class="btn btn-outline-light btn-lg" href="/about" role="button">Learn more...</a>
         </p> -->
       </div>
       <div class="col col-lg-3 col-md-4">
         <div class="list-group font-headings my-2">
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="/projects" class="list-group-item list-group-item-action">
             Projects
             <i class="fa fa-caret-right pull-right mt-1"></i>
           </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            Organizations
+          <a href="/organisations" class="list-group-item list-group-item-action">
+            Organisations
             <i class="fa fa-caret-right pull-right mt-1"></i>
           </a>
           <a href="#" class="list-group-item list-group-item-action">
@@ -55,19 +55,19 @@ body_class: home
     <p class="lead mb-4">A sample of the projects</p>
 
     <div class="card-deck text-left">
-      {% for project in site.data.projects limit:3 %}
+      {% for project in site.projects limit:3 %}
         <div class="card">
           <img class="card-img-top" src="{{ site.base_url }}/img/earth.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">{{ project.Name }}</h4>
-            <p class="card-text">{{ project.Description }}</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <h4 class="card-title">{{ project.title }}</h4>
+            <p class="card-text">{{ project.description }}</p>
+            <a href="{{ project.url }}" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       {% endfor %}
     </div>
     <p class="mt-5 mb-1">
-      <a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="#">Browse all the projects</a>
+      <a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="/projects">Browse all the projects</a>
     </p>
   </div>
 </div>
@@ -118,7 +118,7 @@ body_class: home
       {% endfor %}
     </div>
 
-    <p class="text-center mt-3 mb-1"><a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="#">View all patterns...</a></p>
+    <p class="text-center mt-3 mb-1"><a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="/patterns">View all patterns...</a></p>
   </div>
 </div>
 

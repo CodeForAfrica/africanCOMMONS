@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: BudgIT
-country: Nigeria, Ghana, Sierra Leone
+countries: Nigeria, Ghana, Sierra Leone
+category: 
 site_url: http://yourbudgit.com
 github_url: http://yourbudgit.com/data/
 related: 

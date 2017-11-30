@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: MWash
-country: Sierra Leone
+countries: Sierra Leone
+category: 
 site_url: https://mwash.codeforsierraleone.org
 github_url: https://github.com/Code4SierraLeone/MWash
 related: 

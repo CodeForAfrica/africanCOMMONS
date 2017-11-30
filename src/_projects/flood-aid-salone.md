@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Flood Aid Salone
-country: Sierra Leone
+countries: Sierra Leone
+category: 
 site_url: 
 github_url: https://github.com/Code4SierraLeone/floodaidsalone-platform-api
 related: https://github.com/Code4SierraLeone/floodaidsalone-dashboard

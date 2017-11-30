@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Biscuit Index
-country: Kenya
+countries: Kenya
+category: 
 site_url: https://biscuitindex.codeforkenya.org/
 github_url: https://github.com/CodeForAfricaLabs/BiscuitIndex
 related: 

@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Mzalendo
-country: Kenya
+countries: Kenya
+category: 
 site_url: http://info.mzalendo.com
 github_url: https://www.mysociety.org/democracy/pombola/
 related: 

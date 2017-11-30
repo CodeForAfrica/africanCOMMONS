@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Living Wages
-country: Tanzania
+countries: Tanzania
+category: 
 site_url: http://livingwages.codefortanzania.org/
 github_url: https://github.com/CodeForTanzania/Domestic-Workers
 related: 

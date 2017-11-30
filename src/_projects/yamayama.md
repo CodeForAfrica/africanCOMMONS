@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: YamaYama
-country: Nigeria
+countries: Nigeria
+category: 
 site_url: https://yamayama.codefornigeria.org
 github_url: https://github.com/CodeForAfrica/AlertME
 related: 

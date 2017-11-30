@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Where my Money Dey
-country: Nigeria
+countries: Nigeria
+category: 
 site_url: http://wmmd.codeforafrica.org
 github_url: https://github.com/CodeForAfrica/WhereMyMoneyDey
 related: 

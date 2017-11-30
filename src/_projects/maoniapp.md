@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: MaoniApp
-country: Tanzania
+countries: Tanzania
+category: 
 site_url: https://play.google.com/store/apps/details?id=org.hatuaproject.maoni
 github_url: 
 related: 

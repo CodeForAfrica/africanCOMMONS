@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Politwoops
-country: Kenya
+countries: Kenya
+category: 
 site_url: https://politwoops.codeforkenya.org
 github_url: https://github.com/propublica/politwoops
 related: 

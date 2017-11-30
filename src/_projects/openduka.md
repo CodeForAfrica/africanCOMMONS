@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: OpenDuka
-country: Kenya
+countries: Kenya
+category: 
 site_url: http://openduka.org
 github_url: https://github.com/OpenInstitute/OpenDuka
 related: 

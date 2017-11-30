@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: AfricanSpending
-country: Kenya, Nigeria, Tanzania
+countries: Kenya, Nigeria, Tanzania
+category: 
 site_url: http://www.africanspending.org/library/index.html
 github_url: https://github.com/CodeForAfrica/AfricanSpending
 related: 

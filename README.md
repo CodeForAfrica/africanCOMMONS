@@ -37,6 +37,9 @@ $ jekyll s
 $ yarn run watch
 ```
 
+
+3. Install 
+
 <!-- TODO: Figure out live-reloading -->
 
 
@@ -45,8 +48,10 @@ $ yarn run watch
 To update the projects:
 
 ```sh
-$ curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=0&single=true&output=csv" > src/_data/projects.csv
+$ yarn run projects --download
 ```
+
+If you don't want to download, can leave out the `--download` flag/argument.
 
 ## Contributing
 

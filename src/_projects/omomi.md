@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Omomi
-country: Nigeria
+countries: Nigeria
+category: 
 site_url: http://omomiapp.com
 github_url: https://github.com/omomi
 related: 

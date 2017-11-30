@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: Climate Change Projections
-country: Kenya, Tanzania, Nigeria, South Africa
+countries: Kenya, Tanzania, Nigeria, South Africa
+category: 
 site_url: https://climatechange.codeforafrica.org/map.html
 github_url: https://github.com/CodeForAfrica/ClimateChangeProjections
 related: 

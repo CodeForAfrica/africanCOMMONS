@@ -23,11 +23,31 @@ h1, h2, h3, h4, h6, .navbar-brand {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
 }
-.font-lora {
+.font-lora, .font-body {
   font-family: 'Lora', serif;
 }
-.font-nunito,.font-headings {
+.font-nunito, .font-headings {
   font-family: 'Nunito', sans-serif;
+}
+
+
+// Solve anchor things - https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033
+*[id]:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -56px; 
+  height: 56px; 
+  visibility: hidden; 
+}
+
+
+
+.item {
+  .media {
+    img {
+      max-width: 100px;
+    }
+  }
 }
 
 

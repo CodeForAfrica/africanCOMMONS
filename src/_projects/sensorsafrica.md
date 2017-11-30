@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: sensorsAFRICA
-country: Kenya, Nigeria, Tanzania
+countries: Kenya, Nigeria, Tanzania
+category: 
 site_url: http://map.airquality.codeforkenya.org/#4/-4.46/19.54
 github_url: https://github.com/opendata-stuttgart/feinstaub-map
 related: 

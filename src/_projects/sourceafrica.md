@@ -1,7 +1,9 @@
 ---
 layout: item
+body_class: item
 title: sourceAFRICA
-country: Kenya
+countries: Kenya
+category: 
 site_url: https://sourceafrica.net
 github_url: https://github.com/CodeForAfrica/sourceAFRICA.app-Briefcase
 related: 
