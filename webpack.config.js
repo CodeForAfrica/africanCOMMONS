@@ -1,15 +1,15 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './webpack/js/main.js',
+  entry: './src/js/main.js',
   output: {
-    filename: 'src/js/bundle.js'
+    filename: 'dist/js/bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        include: /webpack\js/,
+        include: /src\js/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -43,7 +43,7 @@ module.exports = {
            loader: 'file-loader',
            options: {
              name: '[name].[ext]',
-             outputPath: 'src/fonts/',    // where the fonts will go
+             outputPath: 'dist/fonts/',    // where the fonts will go
            }
          }]
        },
