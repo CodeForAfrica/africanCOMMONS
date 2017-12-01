@@ -23,29 +23,32 @@ function download() {
   console.log('Download started')
   var files = [
     {
+      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=297467500&single=true&output=csv',
+      filename: 'categories.csv'
+    },
+    {
       url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=0&single=true&output=csv',
       filename: 'projects.csv'
     },
     {
       url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=577365421&single=true&output=csv',
       filename: 'organisations.csv'
-    },
-    {
-      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=297467500&single=true&output=csv',
-      filename: 'categories.csv'
     }
   ]
 
   for (var i = files.length - 1; i >= 0; i--) {
     var options = {
-      directory: './src/_data/',
+      directory: './dist/_data/',
       filename: files[i].filename
     }
-    downloadFile(files[i].url, options, function(err){
+    downloadFile(files[i].url, options, function(files, i, err){
       if (err) throw err
-      console.log('Download complete')
-      create_projects()
-    }) 
+
+      console.log('Download complete - ' + files[i].filename )
+      if (files[i].filename == 'projects.csv'){
+        create_projects()
+      }
+    }(files, i))
   }
   
 }
@@ -56,7 +59,7 @@ function create_projects() {
 
   console.log('Processing projects.')
 
-  var data_url = './src/_data/projects.csv'
+  var data_url = './dist/_data/projects.csv'
 
   fs.readFile(data_url, 'utf8', function (err, data) {
 
@@ -86,7 +89,7 @@ function create_projects() {
       
       content += '---\n'
 
-      fs.outputFileSync('./src/_projects/' + utils.slugify(projects[i].Name) + '.md', content)
+      fs.outputFileSync('./dist/_projects/' + utils.slugify(projects[i].Name) + '.md', content)
       
     }
 
@@ -99,7 +102,7 @@ function create_projects() {
 function publish() {
   console.log('Starting Github Pages publish...')
   var ghpages = require('gh-pages')
-  ghpages.publish('src', function(err) {
+  ghpages.publish('dist', function(err) {
     if (err) throw err
     console.log('Completed Github pages publish.')
   });

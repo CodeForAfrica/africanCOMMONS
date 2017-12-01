@@ -29,7 +29,7 @@ From inside the root directory;
 
 1. Serve using Jekyll;
 ```sh
-$ jekyll s -s src
+$ jekyll s -s dist
 ```
 
 2. On a separate terminal window, watch for JS/CSS changes using Webpack;

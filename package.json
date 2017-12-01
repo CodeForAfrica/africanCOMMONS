@@ -2,7 +2,7 @@
   "name": "africancommons",
   "version": "1.0.0",
   "description": "A platform to showcase re-useable tools built across Africa and the people & organizations building them.",
-  "main": "webpack/js/main.js",
+  "main": "src/js/main.js",
   "bin": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
