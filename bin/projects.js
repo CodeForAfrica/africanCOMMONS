@@ -21,17 +21,33 @@ switch (args[0]) {
 // Download the datas
 function download() {
   console.log('Download started')
-  var url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=0&single=true&output=csv'
-   
-  var options = {
-    directory: './src/_data/',
-    filename: 'projects.csv'
+  var files = [
+    {
+      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=0&single=true&output=csv',
+      filename: 'projects.csv'
+    },
+    {
+      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=577365421&single=true&output=csv',
+      filename: 'organisations.csv'
+    },
+    {
+      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=297467500&single=true&output=csv',
+      filename: 'categories.csv'
+    }
+  ]
+
+  for (var i = files.length - 1; i >= 0; i--) {
+    var options = {
+      directory: './src/_data/',
+      filename: files[i].filename
+    }
+    downloadFile(files[i].url, options, function(err){
+      if (err) throw err
+      console.log('Download complete')
+      create_projects()
+    }) 
   }
-  downloadFile(url, options, function(err){
-    if (err) throw err
-    console.log('Download complete')
-    create_projects()
-  }) 
+  
 }
 
 

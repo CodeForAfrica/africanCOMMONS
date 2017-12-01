@@ -26,9 +26,9 @@ permalink: /projects/index.html
 
 <div class="container" id="all">
   <h1 class="text-center mb-4 mt-5">All Projects</h1>
-  <div class="border border-right-0 border-left-0 py-3 text-center">
+  <div class="border border-right-0 border-left-0 py-1 text-center">
     {% for category in site.data.categories.projects %}
-      <a href="#" class="btn btn-sm btn-outline-primary">
+      <a href="#" class="btn btn-sm m-2 btn-outline-primary">
         {{ category.title }}
       </a>
     {% endfor %}
