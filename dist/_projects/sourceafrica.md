@@ -5,7 +5,7 @@ title: sourceAFRICA
 countries: Kenya
 category: 
 site_url: https://sourceafrica.net
-github_url: undefined
+github_url: https://github.com/CodeForAfrica/sourceAFRICA.app-Briefcase
 related: 
 description: >
   Africa's premier repository for actionable documents

@@ -5,7 +5,7 @@ title: CodeTanzania
 countries: Tanzania
 category: 
 site_url: 
-github_url: undefined
+github_url: https://github.com/CodeTanzania
 related: 
 description: >
   

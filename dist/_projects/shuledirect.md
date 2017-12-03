@@ -5,7 +5,7 @@ title: ShuleDirect
 countries: Tanzania
 category: 
 site_url: https://www.shuledirect.co.tz
-github_url: undefined
+github_url: https://github.com/ShuleDirectTech/Shule-Direct-Heart-AR
 related: 
 description: >
   An online platform that provides educational learning content for students and teachers in secondary schools.

@@ -1,5 +1,6 @@
-var downloadFile = require('download-file')
 var fs = require('fs-extra')
+
+var downloadFile = require('download-file')
 var Papa = require('papaparse')
 
 var utils = require('./utils')
@@ -33,22 +34,30 @@ function download() {
     {
       url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=577365421&single=true&output=csv',
       filename: 'organisations.csv'
+    },
+    {
+      url: 'https://raw.githubusercontent.com/HacksHackersAfrica/github-africa/master/step4.json',
+      filename: 'users.json'
     }
   ]
 
   for (var i = files.length - 1; i >= 0; i--) {
     var options = {
-      directory: './dist/_data/',
+      directory: './dist/_data',
       filename: files[i].filename
     }
-    downloadFile(files[i].url, options, function(files, i, err){
+    downloadFile(files[i].url, options, function(err, path){
       if (err) throw err
-
-      console.log('Download complete - ' + files[i].filename )
-      if (files[i].filename == 'projects.csv'){
-        create_projects()
+      switch (path) {
+        case options.directory + '/projects.csv':
+          create_projects()
+          break
+        case options.directory + '/users.json':
+          create_users()
+          break
       }
-    }(files, i))
+      console.log('Download complete - ' + path)
+    })
   }
   
 }
@@ -66,7 +75,7 @@ function create_projects() {
     if (err) throw err
 
     // Clean the projects folder first
-    fs.emptyDirSync('./src/_projects')
+    fs.emptyDirSync('./dist/_projects')
 
     var projects = Papa.parse(data, {'header': true}).data
 
@@ -95,6 +104,13 @@ function create_projects() {
 
     console.log('Finished processing ' + projects.length + ' projects.')
   })
+}
+
+
+// JSON to CSV
+function create_users() {
+  var users = fs.readJsonSync('./dist/_data/users.json')
+  fs.outputFileSync('./dist/_data/users.csv', Papa.unparse(users))
 }
 
 
