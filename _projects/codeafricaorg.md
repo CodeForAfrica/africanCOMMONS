@@ -4,7 +4,7 @@ body_class: item
 title: codeafrica.org
 countries: Kenya
 category: 
-site_url: codeafrica.org
+site_url: http://codeafrica.org
 github_url: https://github.com/codeafrica/github-africa
 related: 
 description: >
