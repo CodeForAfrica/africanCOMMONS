@@ -43,10 +43,16 @@ $ yarn run watch
 To update the projects:
 
 ```sh
-$ yarn run projects --download
+$ yarn run commons --download
 ```
 
 If you don't want to download, can leave out the `--download` flag/argument.
+
+After updating the data, push the repository and the raw users data will be available at:
+
+```
+https://raw.githubusercontent.com/CodeForAfrica/commons.AFRICA/develop/dist/_data/users.csv
+```
 
 
 ## Deployment
@@ -54,7 +60,7 @@ If you don't want to download, can leave out the `--download` flag/argument.
 Currently we deploy using [Github pages](http://pages.github.com/). To publish, run:
 
 ```sh
-$ yarn run projects --publish
+$ yarn run commons --publish
 ```
 
 ## Contributing

@@ -9,7 +9,7 @@
     "build": "webpack --progress --optimize-minimize -p",
     "watch": "webpack --progress --optimize-minimize --watch",
     "serve": "webpack-dev-server --open",
-    "projects": "node bin/projects.js"
+    "commons": "node bin/commons.js"
   },
   "repository": "git+https://github.com/CodeForAfricaLabs/AfricanCOMMONS.git",
   "keywords": [

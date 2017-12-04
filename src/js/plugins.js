@@ -22,3 +22,9 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+
+// Enable tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

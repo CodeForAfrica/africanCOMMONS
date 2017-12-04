@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: HealthTools
 countries: Kenya
-category: 
+category: Health
 site_url: http://health.the-star.co.ke
 github_url: https://github.com/CodeForAfrica/HealthTools.KE-theStarHealth
 related: 
