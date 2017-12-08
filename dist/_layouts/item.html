@@ -14,14 +14,14 @@ layout: default
   <div class="container py-5">
 
     <div class="row">
-      <div class="col-8">
+      <div class="col-md-8">
         <div class="media">
           <img class="align-self-start mr-3 p-2" src="/img/icons/robot.svg" alt="Generic placeholder image">
           <div class="media-body">
             <h2 class="mt-0 d-flex justify-content-between">
               {{ page.title }}
               <span><a href="#" class="ml-2 btn btn-sm btn-outline-primary">
-                Category
+                {{ page.category }}
               </a></span>
             </h2>
             <p>Countries: {{ page.countries }}</p>
@@ -36,8 +36,8 @@ layout: default
 
         {% if page.related == nil %}
           <div class="text-muted text-center">
-            <p><i>No related projects.<br/>
-              <small>Help us by <a href="{{ site.project_add_url }}" target="_blank" rel="noopener">adding projects</a> that might be related.</small></i>
+            <p><i>No related {{ page.collection }}.<br/>
+              <small>Help us by <a href="{{ site.project_add_url }}" target="_blank" rel="noopener">adding {{ page.collection }}</a> that might be related.</small></i>
             </p>
           </div>
         {% endif %}
@@ -48,7 +48,7 @@ layout: default
         <div id="disqus_thread"></div>
       </div> <!-- /.col-9 -->
 
-      <div class="col-4 links">
+      <div class="col-md-4 links">
         <div class="list-group mb-3">
           <a href="{{ page.site_url }}" target="_blank" rel="noopener" class="list-group-item list-group-item-action flex-column align-items-center">
             <div class="d-flex w-100 justify-content-between align-items-center">

@@ -1,5 +1,6 @@
 ---
-layout: Living Wage
+layout: review
+title: Living Wage
 ---
 
 This is a short review of Living Wage

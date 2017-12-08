@@ -4,8 +4,10 @@ description: Showcasing re-useable tools built across Africa and the people & or
 url: https://commons.africa
 enforce_ssl: commons.africa
 
-blog_url: https://medium.com/code-for-africa
+medium_url: https://medium.com/code-for-africa
 github_url: https://github.com/CodeForAfrica/AfricanCOMMONS
+facebook_url: https://facebook.com/HacksHackersAfrica
+twitter_url: https://twitter.com/Code4Africa
 
 google_analytics: UA-44795600-36
 

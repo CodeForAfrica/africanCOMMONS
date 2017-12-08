@@ -114,42 +114,38 @@ function create_orgs() {
 
   console.log('Processing organisations.')
 
-  var data_url = './dist/_data/organisations.csv'
+  var data = fs.readFileSync('./dist/_data/organisations.csv', 'utf8')
 
-  fs.readFile(data_url, 'utf8', function (err, data) {
+  // Clean the organisations folder first
+  fs.emptyDirSync('./dist/_organisations')
 
-    if (err) throw err
+  var orgs = Papa.parse(data, {'header': true}).data
 
-    // Clean the organisations folder first
-    fs.emptyDirSync('./dist/_organisations')
+  // create the files
+  for (var i = 0; i <= orgs.length - 1; i++) {
+    var content = ''
 
-    var orgs = Papa.parse(data, {'header': true}).data
+    content = '---\n'
 
-    // create the files
-    for (var i = 0; i <= orgs.length - 1; i++) {
-      var content = ''
+    content += 'layout: item\n'
+    content += 'body_class: item\n'
 
-      content = '---\n'
+    content += 'title: ' + orgs[i].Name + '\n'
+    content += 'countries: ' + orgs[i].Country + '\n'
+    content += 'category: ' + orgs[i].Category + '\n'
+    content += 'site_url: ' + orgs[i].Url + '\n'
+    content += 'github_url: ' + orgs[i].Github + '\n'
+    content += 'related: ' + orgs[i].Related + '\n'
+    content += 'description: >\n  ' + orgs[i].Description.replace('\n', '\n  ') + '\n'
+    
+    content += '---\n'
 
-      content += 'layout: item\n'
-      content += 'body_class: item\n'
+    fs.outputFileSync('./dist/_organisations/' + utils.slugify(orgs[i].Name) + '.md', content)
+    
+  }
 
-      content += 'title: ' + orgs[i].Name + '\n'
-      content += 'countries: ' + orgs[i].Country + '\n'
-      content += 'category: ' + orgs[i].Category + '\n'
-      content += 'site_url: ' + orgs[i].Url + '\n'
-      content += 'github_url: ' + orgs[i].Github + '\n'
-      content += 'related: ' + orgs[i].Related + '\n'
-      content += 'description: >\n  ' + orgs[i].Description.replace('\n', '\n  ') + '\n'
-      
-      content += '---\n'
-
-      fs.outputFileSync('./dist/_organisations/' + utils.slugify(orgs[i].Name) + '.md', content)
-      
-    }
-
-    console.log('Finished processing ' + orgs.length + ' organisations.')
-  })
+  console.log('Finished processing ' + orgs.length + ' organisations.')
+  
 }
 
 
