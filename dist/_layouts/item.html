@@ -4,8 +4,8 @@ layout: default
 
 <div class="bg-secondary py-2 text-light">
   <div class="container">
-    <a href="/projects#all" class="btn text-light">
-      <i class="fa fa-chevron-left mr-1"></i> All projects
+    <a href="/{{ page.collection }}#all" class="btn text-light">
+      <i class="fa fa-chevron-left mr-1"></i> All {{ page.collection | capitalize }}
     </a>
   </div>
 </div>
@@ -31,7 +31,7 @@ layout: default
         </div>
         
 
-        <h4 class="mt-5">Related Projects</h4>
+        <h4 class="mt-5">Related {{ page.collection | capitalize }}</h4>
         <hr>
 
         {% if page.related == nil %}

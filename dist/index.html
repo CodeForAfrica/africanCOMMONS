@@ -7,8 +7,8 @@ body_class: home
   <div class="container">
     <div class="row align-items-end">
       <div class="col">
-        <h1 class="display-4">AfricanCOMMONS</h1>
-        <p class="lead">A platform to showcase re-useable tools built across Africa and the people &amp; organisations building them.</p>
+        <h1 class="display-4">{{ site.title }}</h1>
+        <p class="lead">{{ site.description }}</p>
         <!-- <p class="lead">
           <a class="btn btn-outline-light btn-lg" href="/about" role="button">Learn more...</a>
         </p> -->
@@ -36,8 +36,11 @@ body_class: home
 
 
 <!-- MAP -->
-<div style="height: 400px; background-color: #000;">
-  
+<div class="w-100">
+  <div class="users-wall text-center" id="marquee-container">
+    {% capture offset_rand %}{{ 'now' | date: '%S' | times: site.data.users.size | divided_by: 60 }}{% endcapture %}
+    {% for user in site.data.users limit:80 offset:offset_rand %}<img src="{{ user.avatar_url }}" class="avatar" data-toggle="tooltip" data-placement="top" title="@{{ user.username }} | {{ user.location }}">{% assign is_break = forloop.index | modulo:20 %}{% if is_break == 0 %}<br/>{% endif %}{% endfor %}
+  </div>
 </div>
 
 <div class="py-5 container text-center">
@@ -57,11 +60,10 @@ body_class: home
     <div class="card-deck text-left">
       {% for project in site.projects limit:3 %}
         <div class="card">
-          <img class="card-img-top" src="{{ site.base_url }}/img/earth.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">{{ project.title }}</h4>
+            <h4 class="card-title mt-2">{{ project.title }}</h4>
             <p class="card-text">{{ project.description }}</p>
-            <a href="{{ project.url }}" class="btn btn-primary">Learn More</a>
+            <a href="{{ project.url }}" class="btn btn-primary mx-auto">Learn More</a>
           </div>
         </div>
       {% endfor %}
@@ -100,13 +102,13 @@ body_class: home
 
 <div class="bg-light py-5">
   <div class="container">
-    <h1 class="text-center">Patterns</h1>
-    <p class="lead text-center">Civic patterns...</p>
-    <div class="card-deck mt-3">
+    <h1 class="text-center">Civic Patterns</h1>
+    <p class="lead text-center">CivicPatterns.org is a collection of patterns and tools that help Civic Technology projects succeed.</p>
+    <div class="card-deck mt-4">
       {% for pattern in site.data.patterns limit:4 %}
         <div class="card text-white bg-primary mb-3 pt-1">
-          <div class="card-body pt-5 justify-content-end">
-            <h4 class="card-title mt-auto">{{ pattern.title }}</h4>
+          <div class="card-body pt-5 d-flex flex-column align-items-start">
+            <h4 class="card-title">{{ pattern.title }}</h4>
             <p class="card-text">{{ pattern.tagline }}</p>
           </div>
           <div class="card-footer text-muted text-white">
@@ -118,7 +120,7 @@ body_class: home
       {% endfor %}
     </div>
 
-    <p class="text-center mt-3 mb-1"><a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="/patterns">View all patterns...</a></p>
+    <p class="text-center mt-3 mb-1"><a class="btn btn-lg btn-outline-primary my-1" style="min-width: 200px;" href="http://civicpatterns.org/" target="_blank">View all patterns...</a></p>
   </div>
 </div>
 

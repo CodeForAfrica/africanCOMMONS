@@ -1,5 +1,5 @@
 title: AfricanCOMMONS
-description: A platform to showcase re-useable tools built across Africa and the people & organizations building them.
+description: Showcasing re-useable tools built across Africa and the people & organisations building them.
 
 url: https://commons.africa
 enforce_ssl: commons.africa
@@ -18,11 +18,18 @@ permalink: pretty
 # Collections
 collections:
   projects:
+    title: Projects
     output: true
     permalink: /:collection/:name
-  organizations:
+  reviews:
+    title: Reviews
+    output: true
+    permalink: /:collection/:name
+  organisations:
+    title: Organisations
     output: true
     permalink: /:collection/:name
   patterns:
+    title: Patterns
     output: true
     permalink: /:collection/:name

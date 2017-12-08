@@ -41,12 +41,26 @@ h1, h2, h3, h4, h6, .navbar-brand {
 }
 
 
-
+// Item (Project or Organisation) Layout
 .item {
   .media {
     img {
       max-width: 100px;
     }
+  }
+}
+
+
+// Users wall of avatars
+.users-wall {
+  overflow-x: scroll;
+  white-space: nowrap;
+  min-height: 400px;
+  background-color: #000;
+  .avatar {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
   }
 }
 

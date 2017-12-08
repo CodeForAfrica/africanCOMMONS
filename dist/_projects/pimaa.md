@@ -5,7 +5,7 @@ title: Pimaa
 countries: Uganda
 category: Environmental
 site_url: 
-github_url: undefined
+github_url: https://github.com/outboxafrica/pimaa
 related: 
 description: >
   An open data internet of things project that seeks to build low cost environment monitoring stations within the Kampala urban areas

@@ -28,10 +28,10 @@ permalink: /projects/index.html
   <h1 class="text-center mb-4 mt-5">All Projects</h1>
   <div class="border border-right-0 border-left-0 py-1 text-center">
     {% for category in site.data.categories %}
-      {% if category.Type == 'Project'}
-      <a href="#" class="btn btn-sm m-2 btn-outline-primary">
-        {{ category.title }}
-      </a>
+      {% if category.Type == 'Project' %}
+        <a href="#" class="btn btn-sm m-2 btn-outline-primary">
+          {{ category.Title }}
+        </a>
       {% endif %}
     {% endfor %}
   </div>
