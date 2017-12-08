@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Pesapal
 countries: Kenya
-category: 
+category: Service Delivery
 site_url: https://www.pesapal.com
 github_url: https://github.com/okal/pesapal.py
 related: 

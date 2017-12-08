@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Know Your City
 countries: Sierra Leone
-category: 
+category: Service Delivery
 site_url: http://bit.ly/know-your-city
 github_url: https://github.com/Code4SierraLeone/KnowYourCity
 related: 

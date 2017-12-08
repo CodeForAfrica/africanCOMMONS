@@ -1,38 +1,29 @@
-Name,Country,Description,Category,URL,Projects
-OpenELIS,"Cote d'Ivoire, Kenya",A community building laboratory information systems for resource-constrained international clinical and reference laboratories.,,http://www.openelis.org,OpenELIS
-Code for Africa,Ghana / Kenya / Nigeria / South Africa / Liberia / Malawi / Mozambique / Tanzania,Multiple projects all available on Github,Not for profit,codeforafrica.org,"GotToVote, afriLEAKS"
-Ona,Kenya,ODK Compliant Data Collection Platform,,ona.io,Ona.io
-Ushahidi,Kenya,Multiple projects all available on Github,,https://www.ushahidi.com/about,Ushahidi
-Map Kibera,Kenya,Trust who's mission is to increase influence and representation of marginalized communities through the creative use of digital tools for action.,,mapkibera.org,Map Kibera
-Mzalendo,Kenya,Org that keeps an eye on Kenyan parliament.,,http://info.mzalendo.com,Mzalendo
-OpenMRS,"Kenya, Rwanda, Mozambique",The global OpenMRS community works together to build the world's leading open source enterprise electronic medical record system platform,Multinational,http://openmrs.org/,Open MRS
-Baobab Health,Malawi,Medical Records Software,Civil Society,http://baobabhealth.org,Out Patient Diagnosis Baobab EMR
-BudgIT,Nigeria,Simplifies budget and matters of public spending for citizens,ICT,yourbudgit.com,BudgIT
-Enough is Enough (EIE),Nigeria,Enough is Enough Nigeria (EiE) is a network of individuals and organizations committed to instituting a culture of good governance and public accountability in Nigeria through active citizenship.,,http://eie.ng,
-CMapit,Nigeria,A company that designs mobile mapping solutions for eveyone to possibly localise and privatise their geospatial data management system,,https://cmapit.com,
-Orodata,Nigeria,A civic tech company that uses data driven approach to tackle Government and Citizens Challenges.,,https://www.orodataviz.com,
-Not Too Young to Run,Nigeria,This civic tech company advocates for the right of every youth that is old enough to vote to equally run for public offices in Nigeria.,,http://www.nottooyoungtorun.org,
-paradigm initiative,Nigeria,,,https://pinigeria.org,
-RapidPro,Rwanda,RapidPro is a hosted service allowing organizations to visually build scalable interactive messaging applications.,,https://community.rapidpro.io/about-rapidpro/,https://github.com/rapidpro/rapidpro
-Code4SA.org,South Africa,Multiple projects. All available on GitHub.,,code4sa.org,https://github.com/Code4SA
-U-Report,Uganda,"U-Report is a free SMS social monitoring tool for community participation, designed to address issues that people care about.",,http://www.ureport.ug,
-The Open Forum Initiative (TOFI),Uganda,?????,,https://www.facebook.com/TOFIUganda/,???
-Parliament Watch,UGANDA,mon­i­tors and re­ports on the work of the Par­lia­ment of Uganda.,,http://parliamentwatch.ug,
-Hatua,Tanzania,Innovative citizen engegement,,http://hatuaproject.org,https://play.google.com/store/apps/details?id=org.hatuaproject.maoni
-Dar Ramani Huria,Tanzania,Mapping project training university students and local community members to create highly accurate maps of the most flood-prone areas of Dar es Salaam,,http://ramanihuria.org,
-Twaweza,Tanzania,"Initiative that works on enabling children to learn, citizens to exercise agency and governments to be more open and responsive in Tanzania, Kenya and Uganda",Multinational,https://www.twaweza.org,
-Code for Tanzania,Tanzania,Non-partisan civic data & civic technology 'change agent' that seeks to give citizens actionable information.,,https://codefortanzania.org,https://github.com/CodeForTanzania
-OpenMRS,"Kenya, Rwanda, Mozambique",The global OpenMRS community works together to build the world's leading open source enterprise electronic medical record system platform,,http://openmrs.org,https://github.com/openmrs
-Data Lab (dLab),Tanzania,"An open working space where data from multiple sectors and sources can be combined, processed, and shared to drive better policies and decision-making",,http://www.dlab.or.tz,https://github.com/dlab-tz
-OpenUpSA,South Africa,A South African civic technology non-profit that empowers citizens to improve their lives and communities,,https://openup.org.za,https://github.com/OpenUpSA
-gazeti,"Kenya, Nigeria, Sierra Leone",Africa's largest largest freely searchable collection of gazettes.,,https://gazeti.africa,https://github.com/gazeti
-Code for Sierra Leone,Sierra Leone,A non-partisan civic data and civic technology ‘change agent’ that uses technology to boost active citizenry and evidence-based public discourse.,,https://codeforsierraleone.org,https://github.com/Code4SierraLeone
-Code for Ghana,Ghana,"Initiative which aims to use open data and technology to promote responsive, innovative and effective governance",,http://www.codeforghana.org,https://github.com/CodeforGhana
-ShuleDirect,Tanzania,An online platform that provides educational learning content for students and teachers in secondary schools.,Educational,https://www.shuledirect.co.tz,ShuleDirect
-Open Data Tanzania,Tanzania,"Tanzanian government's  initiative to make Government business more open to its citizens in the interest of improving public service delivery, Government responsiveness, combating corruption and building greater trust.",Government,http://www.opendata.go.tz,
-Edo State Open Data,Nigeria,"Official data repository for Edo State Government. It provides an easy way to find, access and reuse public datasets from the State Government, international organizations and non-state actors.",Government,http://data.edostate.gov.ng/Home/index.html,
-ICT Authority,Kenya,,Government,http://icta.go.ke,
-Making All Voices Count,"Kenya, South Africa, Ghana, Liberia","Organisation that seeks to promote transparency, fight corruption, empower citizens, and harness the power of new technologies to make government more effective and accountable.",Multinational,http://www.makingallvoicescount.org,http://www.makingallvoicescount.org/project/
-Omidyar Network,,"a self-styled ""philanthropic investment firm,"" composed of a foundation and an impact investment firm",Multinational,,https://www.omidyar.com/investees?initiative=&region=africa&search=#filter
-Outbox Hub,Uganda,Innovation and technology infrastructure hub that supports African entrepreneurs.,,http://www.outbox.co.ug,Pimaa
-OpenHIE,"Rwanda, South Africa, Sierra Leone, Tanzania","Organisation that works to improve the health of the underserved through open and collaborative, development and support of country driven, large scale health information sharing architectures.",Multinational,https://ohie.org,OpenMRS
+Name,Country,Description,Category,Url,Projects,Github,Related
+Baobab Health,Malawi,Medical Records Software,ICT,http://baobabhealth.org,Out Patient Diagnosis Baobab EMR,https://github.com/BaobabHealthTrust,
+BudgIT,Nigeria,Simplifies budget and matters of public spending for citizens,ICT,yourbudgit.com,BudgIT,,
+cMapIT,Nigeria,A company that designs mobile mapping solutions for eveyone to possibly localise and privatise their geospatial data management system,ICT,https://cmapit.com,WaterDataNG,https://github.com/cmapithub,
+Code for Africa,Ghana / Kenya / Nigeria / South Africa / Liberia / Malawi / Mozambique / Tanzania,Multiple projects all available on Github,Not for profit,codeforafrica.org,"GotToVote, afriLEAKS",https://github.com/CodeForAfrica,
+Code for Ghana,Ghana,"Initiative which aims to use open data and technology to promote responsive, innovative and effective governance",Not for profit,http://www.codeforghana.org,Where My Money Dey,https://github.com/CodeforGhana,
+Code for Sierra Leone,Sierra Leone,A non-partisan civic data and civic technology ‘change agent’ that uses technology to boost active citizenry and evidence-based public discourse.,Not for profit,https://codeforsierraleone.org,"MWash, Flood Aid Salone",https://github.com/Code4SierraLeone,
+Code for Tanzania,Tanzania,Non-partisan civic data & civic technology 'change agent' that seeks to give citizens actionable information.,Not for profit,https://codefortanzania.org,"Living Wage, Hospital Locator",https://github.com/CodeForTanzania,
+Code4SA.org,South Africa,Multiple projects. All available on GitHub.,Not for profit,code4sa.org,TaxClock,https://github.com/Code4SA,
+Data Lab (dLab),Tanzania,"An open working space where data from multiple sectors and sources can be combined, processed, and shared to drive better policies and decision-making",ICT,http://www.dlab.or.tz,,https://github.com/dlab-tz,
+gazeti,"Kenya, Nigeria, Sierra Leone",Africa's largest largest freely searchable collection of gazettes.,Not for profit,https://gazeti.africa,gazeti.AFRICA,https://github.com/gazeti,
+iHub,Kenya,Innovation hub for ICT focused tech entrepreneurs and individuals who aspire to create companies that tackle some of Africa's biggest challenges.,ICT,https://ihub.co.ke,,https://github.com/iHub,
+Jembi Health Systems,South Africa,African-based not-for-profit NGO based in South Africa focusing on the development of eHealth and health Information systems in developing countries,Not for profit,https://www.jembi.org,,https://github.com/jembi?page=1,
+Map Kibera Trust,Kenya,Trust who's mission is to increase influence and representation of marginalized communities through the creative use of digital tools for action.,Not for profit,mapkibera.org,Map Kibera,https://github.com/mapkibera,
+Mzalendo,Kenya,Org that keeps an eye on Kenyan parliament.,,http://info.mzalendo.com,Mzalendo,https://www.mysociety.org/democracy/pombola/,
+Omidyar Network,,"a self-styled ""philanthropic investment firm,"" composed of a foundation and an impact investment firm",Multinational,,https://www.omidyar.com/investees?initiative=&region=africa&search=#filter,,
+Ona,Kenya,ODK Compliant Data Collection Platform,ICT,ona.io,Ona.io,https://github.com/onaio,
+OpenELIS,"Cote d'Ivoire, Kenya",A community building laboratory information systems for resource-constrained international clinical and reference laboratories.,Multinational,http://www.openelis.org,OpenELIS,https://github.com/openelisglobal,
+OpenHIE,"Rwanda, South Africa, Sierra Leone, Tanzania","Organisation that works to improve the health of the underserved through open and collaborative, development and support of country driven, large scale health information sharing architectures.",Multinational,https://ohie.org,OpenMRS,,
+OpenMRS,"Kenya, Rwanda, Mozambique",The global OpenMRS community works together to build the world's leading open source enterprise electronic medical record system platform,Multinational,http://openmrs.org/,Open MRS,https://github.com/openmrs,
+OpenMRS,"Kenya, Rwanda, Mozambique",The global OpenMRS community works together to build the world's leading open source enterprise electronic medical record system platform,ICT,http://openmrs.org,OpenMRS,https://github.com/openmrs,
+OpenUpSA,South Africa,A South African civic technology non-profit that empowers citizens to improve their lives and communities,Not for profit,https://openup.org.za,Wazimap,https://github.com/OpenUpSA,
+Outbox Hub,Uganda,Innovation and technology infrastructure hub that supports African entrepreneurs.,,http://www.outbox.co.ug,Pimaa,,
+RapidPro,Rwanda,RapidPro is a hosted service allowing organizations to visually build scalable interactive messaging applications.,ICT,https://community.rapidpro.io/about-rapidpro/,Rapid Pro,https://github.com/rapidpro,
+ShuleDirect Tech,Tanzania,An online platform that provides educational learning content for students and teachers in Tanzanian secondary schools.,Educational,https://www.shuledirect.co.tz,ShuleDirect,https://github.com/ShuleDirectTech,
+Taarifa,Tanzania,"Organisation building the Taarifa Platform. An open source web API, designed to close citizen feedback loops.",ICT,http://taarifa.org,"Taarifa Platform, Taarifa Waterpoints",https://github.com/taarifa,
+They Work For You,UGANDA,mon­i­tors and re­ports on the work of the Par­lia­ment of Uganda.,Civil Society,http://theyworkforyou.github.io/uganda-parliament-watch/,Uganda Parliament Watch,https://github.com/theyworkforyou,
+Ushahidi,Kenya,Multiple projects all available on Github,ICT,https://www.ushahidi.com/about,Ushahidi Platform,https://github.com/ushahidi,
+Vizzuality,Kenya,"Organisation of data engineers, designers, strategists and scientists creating unique tools and applications with a lasting benefit to society and the environment",ICT,http://www.vizzuality.com,Kenya Dashboard,https://github.com/Vizzuality,

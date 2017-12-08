@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: MWash
 countries: Sierra Leone
-category: 
+category: Service Delivery
 site_url: https://mwash.codeforsierraleone.org
 github_url: https://github.com/Code4SierraLeone/MWash
 related: 

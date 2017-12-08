@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: StarReports
 countries: Kenya
-category: 
+category: News/ Journalistic
 site_url: http://reports.the-star.co.ke
 github_url: https://github.com/CodeForAfrica/CitizenReporter-Android
 related: 

@@ -16,13 +16,14 @@ switch (args[0]) {
   default:
     create_projects()
     create_users()
+    create_orgs()
 }
 
 
 
 // Download the data
 function download() {
-  console.log('Download started')
+  console.log('Downloads started')
   var files = [
     {
       url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=297467500&single=true&output=csv',
@@ -43,12 +44,14 @@ function download() {
   ]
 
   for (var i = files.length - 1; i >= 0; i--) {
+    console.log('Downloading ' + files[i].filename)
     var options = {
       directory: './dist/_data',
       filename: files[i].filename
     }
     downloadFile(files[i].url, options, function(err, path){
       if (err) throw err
+      console.log('Download complete - ' + path)
       switch (path) {
         case options.directory + '/projects.csv':
           create_projects()
@@ -56,8 +59,10 @@ function download() {
         case options.directory + '/users.json':
           create_users()
           break
+        case options.directory + '/organisations.csv':
+          create_orgs()
+          break
       }
-      console.log('Download complete - ' + path)
     })
   }
   
@@ -69,19 +74,59 @@ function create_projects() {
 
   console.log('Processing projects.')
 
-  var data_url = './dist/_data/projects.csv'
+  var data = fs.readFileSync('./dist/_data/projects.csv', 'utf8')
+
+  // Clean the projects folder first
+  fs.emptyDirSync('./dist/_projects')
+
+  var projects = Papa.parse(data, {'header': true}).data
+
+  // create the files
+  for (var i = 0; i <= projects.length - 1; i++) {
+    var content = ''
+
+    content = '---\n'
+
+    content += 'layout: item\n'
+    content += 'body_class: item\n'
+
+    content += 'title: ' + projects[i].Name + '\n'
+    content += 'countries: ' + projects[i].Country + '\n'
+    content += 'category: ' + projects[i].Category + '\n'
+    content += 'site_url: ' + projects[i].Url + '\n'
+    content += 'github_url: ' + projects[i].Github + '\n'
+    content += 'related: ' + projects[i].Related + '\n'
+    content += 'description: >\n  ' + projects[i].Description.replace('\n', '\n  ') + '\n'
+    
+    content += '---\n'
+
+    fs.outputFileSync('./dist/_projects/' + utils.slugify(projects[i].Name) + '.md', content)
+    
+  }
+
+  console.log('Finished processing ' + projects.length + ' projects.')
+  
+}
+
+
+// Create the organisations' files
+function create_orgs() {
+
+  console.log('Processing organisations.')
+
+  var data_url = './dist/_data/organisations.csv'
 
   fs.readFile(data_url, 'utf8', function (err, data) {
 
     if (err) throw err
 
-    // Clean the projects folder first
-    fs.emptyDirSync('./dist/_projects')
+    // Clean the organisations folder first
+    fs.emptyDirSync('./dist/_organisations')
 
-    var projects = Papa.parse(data, {'header': true}).data
+    var orgs = Papa.parse(data, {'header': true}).data
 
     // create the files
-    for (var i = 0; i <= projects.length - 1; i++) {
+    for (var i = 0; i <= orgs.length - 1; i++) {
       var content = ''
 
       content = '---\n'
@@ -89,26 +134,26 @@ function create_projects() {
       content += 'layout: item\n'
       content += 'body_class: item\n'
 
-      content += 'title: ' + projects[i].Name + '\n'
-      content += 'countries: ' + projects[i].Country + '\n'
-      content += 'category: ' + projects[i].Category + '\n'
-      content += 'site_url: ' + projects[i].Url + '\n'
-      content += 'github_url: ' + projects[i].Github + '\n'
-      content += 'related: ' + projects[i].Related + '\n'
-      content += 'description: >\n  ' + projects[i].Description.replace('\n', '\n  ') + '\n'
+      content += 'title: ' + orgs[i].Name + '\n'
+      content += 'countries: ' + orgs[i].Country + '\n'
+      content += 'category: ' + orgs[i].Category + '\n'
+      content += 'site_url: ' + orgs[i].Url + '\n'
+      content += 'github_url: ' + orgs[i].Github + '\n'
+      content += 'related: ' + orgs[i].Related + '\n'
+      content += 'description: >\n  ' + orgs[i].Description.replace('\n', '\n  ') + '\n'
       
       content += '---\n'
 
-      fs.outputFileSync('./dist/_projects/' + utils.slugify(projects[i].Name) + '.md', content)
+      fs.outputFileSync('./dist/_organisations/' + utils.slugify(orgs[i].Name) + '.md', content)
       
     }
 
-    console.log('Finished processing ' + projects.length + ' projects.')
+    console.log('Finished processing ' + orgs.length + ' organisations.')
   })
 }
 
 
-// JSON to CSV
+// Create Users CSV
 function create_users() {
   console.log('Processing users.')
 
@@ -116,6 +161,7 @@ function create_users() {
   fileToMove = './dist/_data/users.json'
   filePath = './dist/js/data/users.json'
   if (fs.existsSync(fileToMove)) {
+    fs.removeSync(filePath)
     fs.moveSync(fileToMove, filePath)
   }
   

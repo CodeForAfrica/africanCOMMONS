@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Politwoops
 countries: Kenya
-category: 
+category: Governance
 site_url: https://politwoops.codeforkenya.org
 github_url: https://github.com/propublica/politwoops
 related: 

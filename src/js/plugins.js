@@ -24,7 +24,8 @@
 // Place any jQuery/helper plugins in here.
 
 
-// Enable tooltips
+// Enable bootstrap tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
