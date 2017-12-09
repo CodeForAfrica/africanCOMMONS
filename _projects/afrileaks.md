@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: afriLEAKS
 countries: Kenya
-category: News / Journalistic
+category: News / Journalistic Tools
 site_url: https://afrileaks.org
 github_url: https://github.com/CodeForAfrica/afriLEAKS-website
 related: 
