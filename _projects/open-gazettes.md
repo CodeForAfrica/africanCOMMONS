@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Open Gazettes
 countries: South Africa
-category: 
+category: Governance
 site_url: https://opengazettes.org.za/
 github_url: https://github.com/OpenUpSA/opengazettes
 related: 

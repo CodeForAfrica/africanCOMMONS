@@ -1,7 +1,7 @@
 ---
 layout: item
 body_class: item
-title: Taarifa.org
+title: Taarifa Waterpoints
 countries: Tanzania
 category: 
 site_url: Taarifa.org

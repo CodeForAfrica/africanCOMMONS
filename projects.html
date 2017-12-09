@@ -3,11 +3,14 @@ layout: default
 permalink: /projects/index.html
 ---
 
+{% assign categories = site.data.categories | where:"Type", "Project" %}
+
 <div class="bg-dark py-5 text-light">
   <div class="container">
     <h2 class="mb-4">Featured Projects</h2>
     <div class="card-deck mt-3">
-      {% for project in site.projects limit:4 %}
+      {% for review in site.reviews limit:4 %}
+        {% assign project = site.projects | where: "slug", review.slug | first %}
         <div class="card text-white bg-primary mb-3 pt-1">
           <div class="card-body pt-5 justify-content-end">
             <h4 class="card-title mt-auto">{{ project.title }}</h4>
@@ -24,12 +27,17 @@ permalink: /projects/index.html
   </div>
 </div>
 
+
+{% for category in categories %}
+<span id="{{ category.Title | slugify }}"></span>
+{% endfor %}
+
 <div class="container" id="all">
   <h1 class="text-center mb-4 mt-5">All Projects</h1>
   <div class="border border-right-0 border-left-0 py-1 text-center">
-    {% for category in site.data.categories %}
+    {% for category in categories %}
       {% if category.Type == 'Project' %}
-        <a href="#" class="btn btn-sm m-2 btn-outline-primary">
+        <a href="#{{ category.Title | slugify }}" class="btn btn-sm m-2 btn-outline-primary category-btn">
           {{ category.Title }}
         </a>
       {% endif %}
@@ -39,7 +47,7 @@ permalink: /projects/index.html
   <div class="my-5">
     <div class="card-columns">
       {% for project in site.projects %}
-        <div class="card">
+        <div class="card project" data-category="{{ project.category | slugify }}">
           <div class="card-body">
             <h4 class="card-title">{{ project.title }}</h4>
             <p class="card-text">{{ project.description }}</p>

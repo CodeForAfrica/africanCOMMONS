@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Biscuit Index
 countries: Kenya
-category: 
+category: Governance
 site_url: https://biscuitindex.codeforkenya.org/
 github_url: https://github.com/CodeForAfricaLabs/BiscuitIndex
 related: 

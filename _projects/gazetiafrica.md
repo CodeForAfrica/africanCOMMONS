@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: gazetiAFRICA
 countries: Kenya, Nigeria, Sierra Leone
-category: 
+category: Service Delivery
 site_url: https://gazeti.africa
 github_url: https://github.com/gazeti/gazeti.AFRICA
 related: 
