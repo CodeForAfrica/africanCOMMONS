@@ -20,7 +20,7 @@ layout: default
           <div class="media-body">
             <h2 class="mt-0 d-flex justify-content-between">
               {{ page.title }}
-              <span><a href="#" class="ml-2 btn btn-sm btn-outline-primary">
+              <span><a href="/{{ page.collection }}#{{ page.category | slugify }}" class="ml-2 btn btn-sm btn-outline-primary">
                 {{ page.category }}
               </a></span>
             </h2>
@@ -29,24 +29,7 @@ layout: default
 
           </div>
         </div>
-        
-
-        <h4 class="mt-5">Related {{ page.collection | capitalize }}</h4>
-        <hr>
-
-        {% if page.related == nil %}
-          <div class="text-muted text-center">
-            <p><i>No related {{ page.collection }}.<br/>
-              <small>Help us by <a href="{{ site.project_add_url }}" target="_blank" rel="noopener">adding {{ page.collection }}</a> that might be related.</small></i>
-            </p>
-          </div>
-        {% endif %}
-
-
-        <hr class="my-4">
-
-        <div id="disqus_thread"></div>
-      </div> <!-- /.col-9 -->
+      </div> <!-- /.col-md-8 -->
 
       <div class="col-md-4 links">
         <div class="list-group mb-3">
@@ -87,32 +70,37 @@ layout: default
           <a href="{{ page.facebook_url }}" target="_blank" class="mx-1"><i class="fa fa-fw fa-facebook fa-lg"></i></a>
           <a href="{{ page.medium_url }}" target="_blank" class="mx-1"><i class="fa fa-fw fa-medium fa-lg"></i></a>
         </p> -->
-      </div>
+      </div> <!-- /.col-md-4 -->
 
-    </div>
+      <div class="col-md-8">
+
+        {% assign review = site.reviews | where: "slug", page.slug | first %}
+        {% if review %}
+          {{ review | markdownify }}
+        {% endif %}
+        
+
+        <h4 class="mt-5">Related {{ page.collection | capitalize }}</h4>
+        <hr>
+
+        {% if page.related == nil %}
+          <div class="text-muted text-center">
+            <p><i>No related {{ page.collection }}.<br/>
+              <small>Help us by <a href="{{ site.project_add_url }}" target="_blank" rel="noopener">adding {{ page.collection }}</a> that might be related.</small></i>
+            </p>
+          </div>
+        {% endif %}
+
+
+        <hr class="my-4">
+
+        {% include disqus.html %}
+
+      </div> <!-- /.col-md-8 -->
+
+    </div> <!-- /.row -->
 
     
 
   </div> <!-- /.container -->
 </section> <!-- /.content -->
-
-
-
-<script>
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://africancommons.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
