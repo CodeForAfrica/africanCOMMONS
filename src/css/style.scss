@@ -19,7 +19,7 @@ html, body {
 p {
   font-family: 'Lora', serif;
 }
-h1, h2, h3, h4, h6, .navbar-brand {
+h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
 }
@@ -30,6 +30,21 @@ h1, h2, h3, h4, h6, .navbar-brand {
   font-family: 'Nunito', sans-serif;
 }
 
+
+// Text background - http://geoffmuskett.com/text-with-background-padding-on-the-end-of-each-line-and-a-gap-between-lines/
+p, h1, h2, h3, h4, h5, h6 {
+  &[class*="bg-"] {
+    background-color: transparent !important;
+    padding: 0 0.3em;
+  }
+  @each $name, $color in $theme-colors {
+    &.bg-#{$name} span {
+      line-height: 1.5em;
+      background-color: $color;
+      box-shadow: 0.3em 0 0 $color, -0.3em 0 0 $color;
+    }
+  }
+}
 
 // Solve anchor things - https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033
 *[id]:before { 

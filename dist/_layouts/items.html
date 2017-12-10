@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+{% assign categories = site.data.categories | where:'Type', page.type %}
+{% assign items = site.collections | where:'label', page.type | first %}
+
+{% if page.type == 'projects' %}
+<div class="bg-dark py-5 text-light text-center">
+  <div class="container">
+    <h2 class="mb-4">Featured Projects</h2>
+    <div class="card-deck mt-3">
+      {% for review in site.reviews limit:4 %}
+        {% assign project = site.projects | where: "slug", review.slug | first %}
+        <div class="card text-white bg-primary mb-3 pt-1">
+          <div class="card-body pt-5 d-flex flex-column justify-content-center">
+            <h4 class="card-title mt-auto">{{ project.title }}</h4>
+            <p class="card-text">{{ project.description }}</p>
+          </div>
+          <div class="card-footer text-muted text-white">
+            <a href="{{ project.url }}" class="btn btn-sm btn-outline-light">
+              Read Review
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% for category in categories %}
+<span id="{{ category.Title | slugify }}"></span>
+{% endfor %}
+
+<div class="container" id="all">
+  <h1 class="text-center mb-4 mt-5">All {{ page.type | capitalize }}</h1>
+  <div class="border border-right-0 border-left-0 py-1 text-center">
+    {% for category in categories %}
+      {% if category.Type == page.type %}
+        <a href="#{{ category.Title | slugify }}" class="btn btn-sm m-2 btn-outline-primary category-btn">
+          {{ category.Title }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="my-5">
+    <div class="card-columns">
+      {% for item in items.docs %}
+        <div class="card item" data-category="{{ item.category | slugify }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ item.title }}</h4>
+            <p class="card-text">{{ item.description }}</p>
+            <a href="{{ item.url }}" class="card-link">Read more...</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+</div>
