@@ -1,7 +1,7 @@
 ---
 layout: item
 body_class: item
-title: gazetiAFRICA
+title: gazeti.AFRICA
 countries: Kenya, Nigeria, Sierra Leone
 category: Service Delivery
 site_url: https://gazeti.africa
