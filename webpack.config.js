@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/js/main.js',
@@ -20,9 +20,9 @@ module.exports = {
       {
         test: /\.(scss)$/,
         use: [{
-          loader: 'style-loader', // inject CSS to page
+          loader: 'style-loader' // inject CSS to page
         }, {
-          loader: 'css-loader', // translates CSS into CommonJS modules
+          loader: 'css-loader' // translates CSS into CommonJS modules
         }, {
           loader: 'postcss-loader', // Run post css actions
           options: {
@@ -30,7 +30,7 @@ module.exports = {
               return [
                 require('precss'),
                 require('autoprefixer')
-              ];
+              ]
             }
           }
         }, {
@@ -38,15 +38,15 @@ module.exports = {
         }]
       },
       {
-         test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-         use: [{
-           loader: 'file-loader',
-           options: {
-             name: '[name].[ext]',
-             outputPath: 'dist/fonts/',    // where the fonts will go
-           }
-         }]
-       },
+        test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'dist/fonts/'    // where the fonts will go
+          }
+        }]
+      }
     ]
   },
   plugins: [
@@ -57,4 +57,4 @@ module.exports = {
       Popper: ['popper.js', 'default']
     })
   ]
-};
+}

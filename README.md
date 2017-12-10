@@ -65,7 +65,15 @@ $ yarn run commons --publish
 
 ## Contributing
 
-TODO
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more on this.
+
+## Tests
+
+To run style guide tests, you can run
+
+```sh
+$ yarn run stardard
+```
 
 ---
 
