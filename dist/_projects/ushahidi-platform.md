@@ -8,5 +8,5 @@ site_url: https://www.ushahidi.com
 github_url: https://github.com/ushahidi/platform
 related: 
 description: >
-  Crowdsource data collection platform
+  Ushahidi, which translates to “testimony” in Swahili, was developed to map reports of violence in Kenya after the post-election violence in 2008.
 ---

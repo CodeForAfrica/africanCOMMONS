@@ -1,12 +1,12 @@
 ---
 layout: item
 body_class: item
-title: TaxClock
-countries: Kenya, South Africa, Tanzania
+title: TaxClock Kenya
+countries: Kenya
 category: Governance
 site_url: https://taxclock.codeforkenya.org
 github_url: https://github.com/CodeForAfrica/TaxClock
 related: 
 description: >
-  Tool that helps users calculate exactly how much time they spend working for the government in terms of taxes
+  TaxClock shows how public budget data can be used to help citizens better understand how governments spend our taxmoney.
 ---

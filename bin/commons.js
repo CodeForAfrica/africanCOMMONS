@@ -52,17 +52,19 @@ function download() {
     downloadFile(files[i].url, options, function(err, path){
       if (err) throw err
       console.log('Download complete - ' + path)
-      switch (path) {
-        case options.directory + '/projects.csv':
-          create_projects()
-          break
-        case options.directory + '/users.json':
-          create_users()
-          break
-        case options.directory + '/organisations.csv':
-          create_orgs()
-          break
-      }
+
+      // TODO: Until we figure out files.pipe callback, this will be run separately.
+      // switch (path) {
+      //   case options.directory + '/projects.csv':
+      //     create_projects()
+      //     break
+      //   case options.directory + '/users.json':
+      //     create_users()
+      //     break
+      //   case options.directory + '/organisations.csv':
+      //     create_orgs()
+      //     break
+      // }
     })
   }
   
