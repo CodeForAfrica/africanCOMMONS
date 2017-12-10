@@ -5,7 +5,7 @@ var Papa = require('papaparse')
 
 var utils = require('./utils')
 
-var args = process.argv.slice(2);
+var args = process.argv.slice(2)
 switch (args[0]) {
   case '--download':
     download()
@@ -14,15 +14,13 @@ switch (args[0]) {
     publish()
     break
   default:
-    create_projects()
-    create_users()
-    create_orgs()
+    createProjects()
+    createOrgs()
+    createUsers()
 }
 
-
-
 // Download the data
-function download() {
+function download () {
   console.log('Downloads started')
   var files = [
     {
@@ -49,29 +47,28 @@ function download() {
       directory: './dist/_data',
       filename: files[i].filename
     }
-    downloadFile(files[i].url, options, function(err, path){
+    downloadFile(files[i].url, options, function (err, path) {
       if (err) throw err
       console.log('Download complete - ' + path)
-      switch (path) {
-        case options.directory + '/projects.csv':
-          create_projects()
-          break
-        case options.directory + '/users.json':
-          create_users()
-          break
-        case options.directory + '/organisations.csv':
-          create_orgs()
-          break
-      }
+
+      // TODO: Until we figure out files.pipe callback, this will be run separately.
+      // switch (path) {
+      //   case options.directory + '/projects.csv':
+      //     create_projects()
+      //     break
+      //   case options.directory + '/users.json':
+      //     create_users()
+      //     break
+      //   case options.directory + '/organisations.csv':
+      //     create_orgs()
+      //     break
+      // }
     })
   }
-  
 }
 
-
 // Create the projects' files
-function create_projects() {
-
+function createProjects () {
   console.log('Processing projects.')
 
   var data = fs.readFileSync('./dist/_data/projects.csv', 'utf8')
@@ -97,21 +94,17 @@ function create_projects() {
     content += 'github_url: ' + projects[i].Github + '\n'
     content += 'related: ' + projects[i].Related + '\n'
     content += 'description: >\n  ' + projects[i].Description.replace('\n', '\n  ') + '\n'
-    
+
     content += '---\n'
 
     fs.outputFileSync('./dist/_projects/' + utils.slugify(projects[i].Name) + '.md', content)
-    
   }
 
   console.log('Finished processing ' + projects.length + ' projects.')
-  
 }
 
-
 // Create the organisations' files
-function create_orgs() {
-
+function createOrgs () {
   console.log('Processing organisations.')
 
   var data = fs.readFileSync('./dist/_data/organisations.csv', 'utf8')
@@ -137,30 +130,27 @@ function create_orgs() {
     content += 'github_url: ' + orgs[i].Github + '\n'
     content += 'related: ' + orgs[i].Related + '\n'
     content += 'description: >\n  ' + orgs[i].Description.replace('\n', '\n  ') + '\n'
-    
+
     content += '---\n'
 
     fs.outputFileSync('./dist/_organisations/' + utils.slugify(orgs[i].Name) + '.md', content)
-    
   }
 
   console.log('Finished processing ' + orgs.length + ' organisations.')
-  
 }
 
-
 // Create Users CSV
-function create_users() {
+function createUsers () {
   console.log('Processing users.')
 
   // Move file because of UTF8 issues with Jekyll
-  fileToMove = './dist/_data/users.json'
-  filePath = './dist/js/data/users.json'
+  var fileToMove = './dist/_data/users.json'
+  var filePath = './dist/js/data/users.json'
   if (fs.existsSync(fileToMove)) {
     fs.removeSync(filePath)
     fs.moveSync(fileToMove, filePath)
   }
-  
+
   var users = fs.readJsonSync(filePath)
 
   // Shuffle the users for save into CSV and use in front page
@@ -172,14 +162,12 @@ function create_users() {
   console.log('Finished processing ' + users.length + ' users.')
 }
 
-
 // Publish to gh-pages
-function publish() {
+function publish () {
   console.log('Starting Github Pages publish...')
   var ghpages = require('gh-pages')
-  ghpages.publish('dist', function(err) {
+  ghpages.publish('dist', function (err) {
     if (err) throw err
     console.log('Completed Github pages publish.')
-  });
+  })
 }
-

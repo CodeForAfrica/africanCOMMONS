@@ -12,9 +12,9 @@ layout: default
     <div class="card-deck mt-3">
       {% for review in site.reviews limit:4 %}
         {% assign project = site.projects | where: "slug", review.slug | first %}
-        <div class="card text-white bg-primary mb-3 pt-1">
-          <div class="card-body pt-5 d-flex flex-column justify-content-center">
-            <h4 class="card-title mt-auto">{{ project.title }}</h4>
+        <div class="card text-white bg-primary mb-3 pt-3">
+          <div class="card-body d-flex flex-column justify-content-center">
+            <h4 class="card-title">{{ project.title }}</h4>
             <p class="card-text">{{ project.description }}</p>
           </div>
           <div class="card-footer text-muted text-white">

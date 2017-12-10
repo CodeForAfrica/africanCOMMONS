@@ -20,7 +20,7 @@ To run this site you need:
 To install the yarn requirements;
 
 ```sh
-yarn install
+yarn
 ```
 
 ### Development
@@ -65,7 +65,15 @@ $ yarn run commons --publish
 
 ## Contributing
 
-TODO
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more on this.
+
+## Tests
+
+To run style guide tests, you can run
+
+```sh
+$ yarn run stardard
+```
 
 ---
 

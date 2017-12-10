@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Code for Tanzania
 countries: Tanzania
-category: Not for profit
+category: Not-for-profit
 site_url: https://codefortanzania.org
 github_url: https://github.com/CodeForTanzania
 related: 

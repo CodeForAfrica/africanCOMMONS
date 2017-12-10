@@ -4,14 +4,21 @@ description: Showcasing re-useable tools built across Africa and the people & or
 url: https://commons.africa
 enforce_ssl: commons.africa
 
+# Social Links
 medium_url: https://medium.com/code-for-africa
-github_url: https://github.com/CodeForAfrica/AfricanCOMMONS
+github_url: https://github.com/CodeForAfrica/commons.AFRICA
 facebook_url: https://facebook.com/HacksHackersAfrica
 twitter_url: https://twitter.com/Code4Africa
 
+# OpenGraph
+fb_app_id: 165881994160670
+
+# Google Analytics
 google_analytics: UA-44795600-36
 
+# When users would like to add projects/organisations
 project_add_url: https://docs.google.com/spreadsheets/d/1GykfqSTxxhXbzszjOrBFuWNruqDXBNiDQNHNpT8Mn4k/edit#gid=0
+
 
 
 # Setup Configs

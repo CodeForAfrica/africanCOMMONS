@@ -8,5 +8,5 @@ site_url: https://hurumap.org
 github_url: https://github.com/CodeForAfrica/HURUmap
 related: 
 description: >
-  Interactive national statistic map
+  HURUmap helps storytellers and campaigners use data to add context and depth to stories.
 ---

@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Jembi Health Systems
 countries: South Africa
-category: Not for profit
+category: Not-for-profit
 site_url: https://www.jembi.org
 github_url: https://github.com/jembi?page=1
 related: 
