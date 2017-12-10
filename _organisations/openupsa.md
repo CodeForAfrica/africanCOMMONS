@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: OpenUpSA
 countries: South Africa
-category: Not for profit
+category: Not-for-profit
 site_url: https://openup.org.za
 github_url: https://github.com/OpenUpSA
 related: 

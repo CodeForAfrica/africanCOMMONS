@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Map Kibera Trust
 countries: Kenya
-category: Not for profit
+category: Not-for-profit
 site_url: mapkibera.org
 github_url: https://github.com/mapkibera
 related: 

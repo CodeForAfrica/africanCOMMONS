@@ -8,5 +8,5 @@ site_url: https://gottovote.cc
 github_url: https://github.com/CodeForAfrica/GotToVote
 related: 
 description: >
-  Enabling citizens to get to the ballot box informed and ready
+  Enabling citizens to get to the ballot box informed and ready. Find your registration center and verify your details through web or SMS.
 ---

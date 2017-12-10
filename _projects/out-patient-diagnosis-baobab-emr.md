@@ -8,5 +8,5 @@ site_url: http://baobabhealth.org
 github_url: https://github.com/BaobabHealthTrust/OPD
 related: https://github.com/BaobabHealthTrust
 description: >
-  Medical Records Software
+  Outpatient is a simple patient registration application written in Ruby on Rails and is intended as a web front end for OpenMRS.
 ---
