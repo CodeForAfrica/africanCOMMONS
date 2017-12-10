@@ -20,7 +20,7 @@ To run this site you need:
 To install the yarn requirements;
 
 ```sh
-yarn install
+yarn
 ```
 
 ### Development
