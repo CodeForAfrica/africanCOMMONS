@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Pimaa
 countries: Uganda
-category: Environmental
+category: Environment
 site_url: 
 github_url: https://github.com/outboxafrica/pimaa
 related: 

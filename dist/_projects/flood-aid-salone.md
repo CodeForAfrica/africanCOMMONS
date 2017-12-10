@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Flood Aid Salone
 countries: Sierra Leone
-category: First Response/ Crisis
+category: First Response / Crisis
 site_url: https://github.com/Code4SierraLeone/floodaidsalone-dashboard
 github_url: https://github.com/Code4SierraLeone/floodaidsalone-platform-api
 related: https://github.com/Code4SierraLeone/floodaidsalone-dashboard

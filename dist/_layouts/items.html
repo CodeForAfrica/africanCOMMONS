@@ -6,18 +6,18 @@ layout: default
 {% assign items = site.collections | where:'label', page.type | first %}
 
 {% if page.type == 'projects' %}
-<div class="bg-dark py-5 text-light">
+<div class="bg-dark py-5 text-light text-center">
   <div class="container">
     <h2 class="mb-4">Featured Projects</h2>
     <div class="card-deck mt-3">
       {% for review in site.reviews limit:4 %}
         {% assign project = site.projects | where: "slug", review.slug | first %}
         <div class="card text-white bg-primary mb-3 pt-1">
-          <div class="card-body pt-5 justify-content-end">
+          <div class="card-body pt-5 d-flex flex-column justify-content-center">
             <h4 class="card-title mt-auto">{{ project.title }}</h4>
             <p class="card-text">{{ project.description }}</p>
           </div>
-          <div class="card-footer text-muted text-white text-center">
+          <div class="card-footer text-muted text-white">
             <a href="{{ project.url }}" class="btn btn-sm btn-outline-light">
               Read Review
             </a>
