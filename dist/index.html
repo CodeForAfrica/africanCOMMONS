@@ -115,11 +115,11 @@ body_class: home
           <div class="card-footer text-muted text-white">
             <a href="#" class="btn btn-sm btn-outline-light mr-auto pattern"
             data-pattern-network="facebook-like" data-pattern-title="{{ pattern.title }}"
-            data-pattern-tagline="{{ pattern.tagline }}" data-pattern-tags="{{ pattern.tags }}"><i class="fa fa-thumbs-up fa-fw"></i></a>
+            data-pattern-tagline="{{ pattern.tagline }}" data-pattern-tags="{{ pattern.tags|join:'#' }}"><i class="fa fa-thumbs-up fa-fw"></i></a>
             <a href="#" class="btn btn-sm btn-outline-light pattern" data-pattern-network="twitter" data-pattern-title="{{ pattern.title }}"
             data-pattern-tagline="{{ pattern.tagline }}" data-pattern-tags="{{ pattern.tags|join:'#' }}"><i class="fa fa-twitter fa-fw"></i></a>
             <a href="#" class="btn btn-sm btn-outline-light pattern" data-pattern-network="facebook-share" data-pattern-title="{{ pattern.title }}"
-            data-pattern-tagline="{{ pattern.tagline }}" data-pattern-tags="{{ pattern.tags }}"><i class="fa fa-facebook fa-fw"></i></a>
+            data-pattern-tagline="{{ pattern.tagline }}" data-pattern-tags="{{ pattern.tags|join:'#' }}"><i class="fa fa-facebook fa-fw"></i></a>
           </div>
         </div>
       {% endfor %}
