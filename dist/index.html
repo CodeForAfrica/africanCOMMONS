@@ -37,10 +37,10 @@ body_class: home
 
 <!-- MAP -->
 <div class="w-100" id="people">
-  <div class="users-wall text-center">
+  <!--<div class="users-wall text-center">
     {% capture offset_rand %}{{ 'now' | date: '%S' | times: site.data.users.size | divided_by: 60 }}{% endcapture %}
     {% for user in site.data.users limit:80 offset:offset_rand %}<img src="{{ user.avatar_url }}" class="avatar" data-toggle="tooltip" data-placement="top" title="@{{ user.username }} | {{ user.location }}">{% assign is_break = forloop.index | modulo:20 %}{% if is_break == 0 %}<br/>{% endif %}{% endfor %}
-  </div>
+  </div>-->
 </div>
 
 <div class="py-5 container text-center">
