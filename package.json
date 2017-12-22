@@ -34,7 +34,8 @@
     "lunr": "^2.1.4",
     "papaparse": "^4.3.6",
     "popper.js": "^1.12.9",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "vanilla-sharing": "^3.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -47,6 +48,6 @@
     "precss": "^2.0.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
-    "webpack": "^3.8.1"
+    "webpack": "^3.10.0"
   }
 }
