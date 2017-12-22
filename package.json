@@ -5,7 +5,7 @@
   "main": "src/js/main.js",
   "bin": {},
   "scripts": {
-    "test": "standard && echo \"Error: no other test specified\" && exit 1",
+    "test": "standard",
     "build": "webpack --progress --optimize-minimize -p",
     "watch": "webpack --progress --optimize-minimize --watch",
     "serve": "webpack-dev-server --open",
