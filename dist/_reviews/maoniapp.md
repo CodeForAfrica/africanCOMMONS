@@ -1,6 +1,6 @@
 ---
 layout: review
-title: Maoni App
+title: MaoniApp
 ---
 
 Good for: Citizen feedback to institutions, tracking complaints within organisations

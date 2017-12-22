@@ -3,4 +3,4 @@ import './plugins'
 
 import '../css/style.scss'
 
-import './filter.js'
+import './filter'
