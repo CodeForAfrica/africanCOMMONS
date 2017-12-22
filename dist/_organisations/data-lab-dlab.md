@@ -1,7 +1,7 @@
 ---
 layout: item
 body_class: item
-title: Data Lab (dLab)
+title: Data Lab (dLAB)
 countries: Tanzania
 category: ICT
 site_url: http://www.dlab.or.tz

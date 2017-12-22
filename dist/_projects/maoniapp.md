@@ -2,11 +2,13 @@
 layout: item
 body_class: item
 title: MaoniApp
+origin: Tanzania
 countries: Tanzania
 category: Service Delivery
-site_url: https://play.google.com/store/apps/details?id=org.hatuaproject.maoni
+site_url: http://vast-dusk-72215.herokuapp.com
 github_url: https://github.com/josephmtinangi/maoni-app
 related: 
+organisations: 
 description: >
-  Web App and SMS application that provides citizens with an opportunity to comment positively or negatively and offer solutions to the challenges facing public offices on service delivery.
+  A tool that looks at how much Tanzanian households pay their domestic workers and uses this to determine whether the workers can in return sustain their own households.
 ---

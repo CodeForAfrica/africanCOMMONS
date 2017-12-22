@@ -87,17 +87,19 @@ function createProjects () {
     content += 'layout: item\n'
     content += 'body_class: item\n'
 
-    content += 'title: ' + projects[i].Name + '\n'
-    content += 'countries: ' + projects[i].Country + '\n'
-    content += 'category: ' + projects[i].Category + '\n'
-    content += 'site_url: ' + projects[i].Url + '\n'
-    content += 'github_url: ' + projects[i].Github + '\n'
-    content += 'related: ' + projects[i].Related + '\n'
-    content += 'description: >\n  ' + projects[i].Description.replace('\n', '\n  ') + '\n'
+    content += 'title: ' + projects[i]['PROJECT NAME'] + '\n'
+    content += 'origin: ' + projects[i]['ORIGIN COUNTRY'] + '\n'
+    content += 'countries: ' + projects[i]['COUNTRIES WHERE DEPLOYED'] + '\n'
+    content += 'category: ' + projects[i]['CATEGORY'] + '\n'
+    content += 'site_url: ' + projects[i]['PROJECT WEBSITE'] + '\n'
+    content += 'github_url: ' + projects[i]['PROJECT GITHUB REPO'] + '\n'
+    content += 'related: ' + projects[i]['RELATED PROJECTS'] + '\n'
+    content += 'organisations: ' + projects[i]['ORGANISATIONS'] + '\n'
+    content += 'description: >\n  ' + projects[i]['PROJECT DESCRIPTION'].replace('\n', '\n  ') + '\n'
 
     content += '---\n'
 
-    fs.outputFileSync('./dist/_projects/' + utils.slugify(projects[i].Name) + '.md', content)
+    fs.outputFileSync('./dist/_projects/' + utils.slugify(projects[i]['PROJECT NAME']) + '.md', content)
   }
 
   console.log('Finished processing ' + projects.length + ' projects.')
