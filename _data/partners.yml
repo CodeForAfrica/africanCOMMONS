@@ -2,14 +2,18 @@
   url: https://worldbank.org
   img: /img/logos/worldbank.png
 
+- name: Data Zetu
+  url: https://datazetu.or.tz
+  img: /img/logos/datazetu.png
+
+- name: MAVC
+  url: http://www.makingallvoicescount.org
+  img: /img/logos/mavc.jpg
+
 - name: ICFJ
   url: https://icfj.org
-  img: /img/logos/icfj-long.png
+  img: /img/logos/icfj.png
 
-- name: Code for Tanzania
-  url: https://codefortanzania.org/
-  img: /img/logos/cftanzania.png
-
-- name: Hacks Hackers Africa
-  url: https://facebook.com/HacksHackersAfrica
-  img: /img/logos/hha.jpg
+- name: Code for Africa
+  url: https://codeforafrica.org/
+  img: /img/logos/cfafrica.png

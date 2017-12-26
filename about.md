@@ -8,7 +8,7 @@ Civic technologists do not need to reinvent the wheel. Civic software solutions 
 
 Locally developed software solutions are also appropriate for reuse elsewhere on the continent, and the wider world. The challenge is discovery: end-user organisations and technologists are seldom aware of existing solutions elsewhere and/or struggle to find credible recommendations that are sensitive to local operational requirements.
 
-AfricanCOMMONS is a platform to showcase re-useable tools built across Africa and the people & organizations building them.
+africanCOMMONS is a platform to showcase re-useable tools built across Africa and the people & organizations building them.
 
 ---
 
