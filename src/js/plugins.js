@@ -31,7 +31,7 @@ $(function () {
 
   $('.pattern').on('click', function (e) {
     // Facebook App ID config
-    var fbAppId = '200110850534528'
+    var fbAppId = '165881994160670'
 
     var url = 'https://commons.africa/'
     var redirectUri = 'https://commons.africa/'
