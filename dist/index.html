@@ -35,20 +35,20 @@ body_class: home
 </div>
 
 
-<!-- MAP -->
+<!-- MAP
 <div class="w-100" id="people">
   <div class="users-wall text-center">
     {% capture offset_rand %}{{ 'now' | date: '%S' | times: site.data.users.size | divided_by: 60 }}{% endcapture %}
     {% for user in site.data.users limit:80 offset:offset_rand %}<img src="{{ user.avatar_url }}" class="avatar" data-toggle="tooltip" data-placement="top" title="@{{ user.username }} | {{ user.location }}">{% assign is_break = forloop.index | modulo:20 %}{% if is_break == 0 %}<br/>{% endif %}{% endfor %}
   </div>
-</div>
+</div>-->
 
 <div class="py-5 container text-center">
   <h1>Contribute</h1>
   <p class="lead">Add your project...</p>
   <p>
-    <a class="btn btn-lg btn-outline-primary mr-3 my-1" style="min-width: 200px;" href="{{ site.project_add_url }}" target="_blank" rel="noopener">+ Add Project</a>
-    <a class="btn btn-lg btn-outline-dark ml-3 my-1" style="min-width: 200px;" href="{{ site.project_add_url }}" target="_blank" rel="noopener">+ Add Organization</a>
+    <a class="btn btn-lg btn-outline-primary mr-3 my-1 btn-add-project-form" style="min-width: 200px;" href="#"  rel="noopener">+ Add Project</a>
+    <a class="btn btn-lg btn-outline-dark ml-3 my-1 btn-add-organization-form" style="min-width: 200px;" href="#" rel="noopener">+ Add Organization</a>
   </p>
 </div>
 
@@ -136,4 +136,141 @@ body_class: home
   {% for partner in site.data.partners %}
     <a href="{{ partner.url | prepend: site.base_url }}" class="m-1 p-1" target="_blank" rel="noopener"><img src="{{ partner.img | prepend: site.base_url }}"></a>
   {% endfor %}
+</div>
+
+<!-- Add Project Modal Form -->
+<div class="modal fade" id="add-project-form" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+      <h5 class="modal-title" >New Project</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+		</div>
+		<div class="modal-body">
+			<form id='project-form'>
+        <div class="form-group">
+          <label for="">Project Name</label>
+          <input type="text" class="form-control"  name="project-name">
+        </div>
+        <div class="form-group">
+          <label for="">Project Website</label>
+          <input type="text" class="form-control"  name='project-website'>
+        </div>
+        <div class="form-group">
+          <label for="">Categories</label>
+          <select type="text" class="form-control" id='project-category' name='project-category'>
+            <option></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Origin Country</label>
+          <input type="text" class="form-control"  name='origin-country'>
+        </div>
+        <div class="form-group">
+          <label for="">Countries Where Deployed</label>
+          <input type="text" class="form-control" name='countries-deployed'>
+        </div>
+        <div class="form-group">
+          <label for="">Github Repo</label>
+          <input type="text" class="form-control" name='github-repo'>
+        </div>
+        <div class="form-group">
+          <label for="">Project Status</label>
+          <select class="form-control"  name='project-status'>
+            <option>Active</option>
+            <option>Dormant</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Related Projects</label>
+          <input type="text" class="form-control"  name='related-projects'>
+        </div>
+        <div class="form-group">
+          <label for="">Project Wiki</label>
+          <textarea class="form-control" name='project-wiki'></textarea>
+        </div>
+        <div class='form-group'>
+          <label for="">Project Description</label>
+          <textarea class='form-control' name='project-description'></textarea>
+        </div>
+    </form>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
+				<div class="btn-group" >
+					<button type="button" class="btn btn-default btn-hover-red"  data-dismiss="modal" role="button">Close</button>
+				</div>
+        &nbsp;&nbsp;&nbsp;
+        <div class="btn-group" >
+          <button type="button" id="save-project" class="btn btn-default btn-hover-green" data-action='submit' role="button">Save</button>
+        </div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+
+<!-- Add Organization Modal Form -->
+<div class="modal fade" id="add-organization-form" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+      <h5 class="modal-title" >New Organization</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+		</div>
+		<div class="modal-body">
+			<form id='organization-form'>
+        <div class="form-group">
+          <label for="">Organization Name</label>
+          <input type="text" class="form-control"  name="organization-name">
+        </div>
+        <div class="form-group">
+          <label for="">Country</label>
+          <input type="text" class="form-control"  name='country'>
+        </div>
+        <div class="form-group">
+          <label for="">Category</label>
+          <select type="text" class="form-control" id='organization-category' name='category'>
+            <option></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">URL</label>
+          <input type="text" class="form-control"  name='organization-url'>
+        </div>
+        <div class="form-group">
+          <label for="">Projects</label>
+          <input type="text" class="form-control" name='projects'>
+        </div>
+        <div class="form-group">
+          <label for="">Github Repo</label>
+          <input type="text" class="form-control" name='github-repo'>
+        </div>
+        <div class="form-group">
+          <label for="">Related Organizations</label>
+          <input type="text" class="form-control"  name='related'>
+        </div>
+        <div class='form-group'>
+          <label for="">Description</label>
+          <textarea class='form-control' name='description'></textarea>
+        </div>
+    </form>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
+				<div class="btn-group" >
+					<button type="button" class="btn btn-default btn-hover-red"  data-dismiss="modal" role="button">Close</button>
+				</div>
+        &nbsp;&nbsp;&nbsp;
+        <div class="btn-group" >
+          <button type="button" id="save-organization" class="btn btn-default btn-hover-green" data-action='submit' role="button">Save</button>
+        </div>
+			</div>
+		</div>
+	</div>
+  </div>
 </div>

@@ -26,7 +26,7 @@ $(function () {
 
 // Enable bootstrap tooltips
 
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 
   $('.pattern').on('click', function(e){
 
@@ -57,7 +57,7 @@ $(function () {
             redirectUri: redirectUri,
             hashtag: tags,
             quote: title,
-            fbAppId: fbAppId 
+            fbAppId: fbAppId
           });
         break;
       case 'facebook-like':
@@ -77,6 +77,115 @@ $(function () {
     }
 
     return false;
-    });
+  }); // End onClick '.pattern'
 
-})
+var categorySelect = null;
+
+$('.btn-add-project-form').on('click', function(e){
+  //Check for user authentication
+  var isSignedIn = gapi.auth2.getAuthInstance().isSignedIn.get();
+  if(isSignedIn){
+    $('#add-project-form').modal();
+    categorySelect = $('#project-category option');
+    if(categorySelect.length <= 1){
+      getSheetData('CATEGORIES', listCategories);
+    }
+    return false;
+  }
+  else{
+    //redirect to sign in page
+    gapi.auth2.getAuthInstance().signIn();
+    return false;
+  }
+
+});
+
+$('.btn-add-organization-form').on('click', function(e){
+  //Check for user authentication
+  var isSignedIn = gapi.auth2.getAuthInstance().isSignedIn.get();
+  if(isSignedIn){
+    $('#add-organization-form').modal();
+    categorySelect = $('#organization-category option');
+    if(categorySelect.length <= 1){
+      getSheetData('CATEGORIES', listOrgCategories);
+    }
+    return false;
+  }
+  else{
+    //redirect to sign in page
+    gapi.auth2.getAuthInstance().signIn();
+    return false;
+  }
+
+});
+
+$('#save-project').on('click', function(e){
+
+  var formData =  $( "#project-form" ).serializeArray();
+  var projectValsDict = {};
+  for(i = 0; i < formData.length; i++){
+    projectValsDict[formData[i].name] = formData[i].value
+  }
+  //arrange form data  to correspond to spreadsheet order
+  var organizations = '';
+
+  var projectVals = [[
+    projectValsDict['project-name'], projectValsDict['origin-country'],
+    projectValsDict['countries-deployed'], projectValsDict['project-description'],
+    organizations, projectValsDict['project-category'],
+    projectValsDict['project-website'], projectValsDict['github-repo'],
+    projectValsDict['project-wiki'], projectValsDict['project-status'],
+    projectValsDict['related-projects']
+  ]];
+  postToSheetsAPI(projectVals);
+  document.getElementById("project-form").reset();
+  $('#add-project-form').modal('toggle');
+});
+/**
+ * Populates 'Category' field choices
+ * @param range of values
+ */
+function listCategories(range, selector='#project-category') {
+
+  var categorySelect = $(selector);
+  for (i = 0; i < range.values.length; i++) {
+    var row = range.values[i];
+    if( row[0] != 'Title' ){
+      $(categorySelect).append($('<option>', {
+          value: row[0],
+          text: row[0]
+      }));
+    }
+  }
+}
+
+/**
+ * Populates organization's 'Category' field choices
+ * @param range of values
+ */
+function listOrgCategories(range){
+  listCategories(range, '#organization-category');
+}
+
+$('#save-organization').on('click', function(){
+
+  var formData =  $( "#organization-form" ).serializeArray();
+  var orgValsDict = {};
+  for(i = 0; i < formData.length; i++){
+    orgValsDict[formData[i].name] = formData[i].value
+  }
+  //arrange form data  to correspond to spreadsheet order
+  //Name	Country	Description	Category	Url	Projects	Github	Related
+
+  var orgVals = [[
+    orgValsDict['organization-name'], orgValsDict['country'],
+    orgValsDict['description'],orgValsDict['organization-url'],
+    orgValsDict['projects'], orgValsDict['github-repo'],
+    orgValsDict['related-projects']
+  ]];
+  postToSheetsAPI(orgVals, 'ORGANISATIONS');
+  document.getElementById("organization-form").reset();
+  $('#add-organization-form').modal('toggle');
+});
+
+});
