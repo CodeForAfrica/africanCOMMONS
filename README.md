@@ -1,7 +1,9 @@
-AfricanCOMMONS
+africanCOMMONS
 --------------
 
 _A platform to showcase re-useable tools built across Africa and the people & organizations building them. Accessible at https://commons.africa/_
+
+[![Build Status](https://travis-ci.org/CodeForAfrica/commons.AFRICA.svg)](https://travis-ci.org/CodeForAfrica/commons.AFRICA)
 
 Why is everyone reinventing the wheel? Massive amounts of money and time are being wasted on rebuilding solutions for digital democracies and open data. africanCOMMONS showcases carefully selected best-of-breed open source civic technologies that have already been ‘battle tested’ elsewhere, for possible re-use in countries across the continent.
 

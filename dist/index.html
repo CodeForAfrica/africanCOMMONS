@@ -33,15 +33,12 @@ body_class: home
   </div>
 
 </div>
-
-
-<!-- MAP
 <div class="w-100" id="people">
   <div class="users-wall text-center">
     {% capture offset_rand %}{{ 'now' | date: '%S' | times: site.data.users.size | divided_by: 60 }}{% endcapture %}
     {% for user in site.data.users limit:80 offset:offset_rand %}<img src="{{ user.avatar_url }}" class="avatar" data-toggle="tooltip" data-placement="top" title="@{{ user.username }} | {{ user.location }}">{% assign is_break = forloop.index | modulo:20 %}{% if is_break == 0 %}<br/>{% endif %}{% endfor %}
   </div>
-</div>-->
+</div>
 
 <div class="py-5 container text-center">
   <h1>Contribute</h1>
@@ -200,11 +197,11 @@ body_class: home
 		<div class="modal-footer">
 			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
 				<div class="btn-group" >
-					<button type="button" class="btn btn-default btn-hover-red"  data-dismiss="modal" role="button">Close</button>
+					<button type="reset" class="btn btn-default btn-hover-red" style="min-width:100px;" role="button">Reset</button>
 				</div>
         &nbsp;&nbsp;&nbsp;
         <div class="btn-group" >
-          <button type="button" id="save-project" class="btn btn-default btn-hover-green" data-action='submit' role="button">Save</button>
+          <button type="button" id="save-project" class="btn btn-primary btn-hover-green" data-action='submit' style="min-width:100px;" role="button">Save</button>
         </div>
 			</div>
 		</div>
@@ -262,12 +259,12 @@ body_class: home
 		</div>
 		<div class="modal-footer">
 			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
-				<div class="btn-group" >
-					<button type="button" class="btn btn-default btn-hover-red"  data-dismiss="modal" role="button">Close</button>
-				</div>
+        <div class="btn-group" >
+          <button type="reset"  class="btn btn-default btn-hover-green" data-action='reset' style="min-width:100px;" role="button">Reset</button>
+        </div>
         &nbsp;&nbsp;&nbsp;
         <div class="btn-group" >
-          <button type="button" id="save-organization" class="btn btn-default btn-hover-green" data-action='submit' role="button">Save</button>
+          <button type="button" id="save-organization" class="btn btn-primary btn-hover-green"  style="min-width:100px;" data-action='submit' role="button">Save</button>
         </div>
 			</div>
 		</div>

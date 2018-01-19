@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Code for Ghana
 countries: Ghana
-category: Not-for-profit
+category: Non Profit
 site_url: http://www.codeforghana.org
 github_url: https://github.com/CodeforGhana
 related: 

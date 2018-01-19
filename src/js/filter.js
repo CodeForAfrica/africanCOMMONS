@@ -1,3 +1,5 @@
+var $ = require('jquery')
+
 function showAll () {
   $('.item.card').show()
   $('.category-btn').removeClass('active')
@@ -13,10 +15,10 @@ function filterCategory (category) {
 }
 
 function locationHashChanged () {
-  if (location.hash === '#all' || location.hash === '') {
+  if (window.location.hash === '#all' || window.location.hash === '') {
     showAll()
   } else {
-    filterCategory(location.hash.substr(1))
+    filterCategory(window.location.hash.substr(1))
   }
 }
 

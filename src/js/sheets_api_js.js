@@ -11,9 +11,10 @@
 
   var authorizeButton = null;//document.getElementById('authorize-button');
   var signoutButton = null;//document.getElementById('signout-button');
-  var theSpreadSheet = '1nj6cbnDgr9A4NWu3F6x_7vytecQDn4WEd6zyqjQOlo0';
+  var SPREADSHEET_ID = '1nj6cbnDgr9A4NWu3F6x_7vytecQDn4WEd6zyqjQOlo0';
   var sheetRange = 'PROJECTS';
   var data = {};
+  var bootbox = require('bootbox');
   /**
    *  On load, called to load the auth2 library and API client library.
    */
@@ -33,57 +34,11 @@
       scope: SCOPES
     }).then(function () {
       // Listen for sign-in state changes.
-      gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+      gapi.auth2.getAuthInstance().isSignedIn.listen(function(){
 
+      });
       // Handle the initial sign-in state.
-      updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-      authorizeButton.onclick = handleAuthClick;
-      signoutButton.onclick = handleSignoutClick;
     });
-  }
-
-  /**
-   *  Called when the signed in status changes, to update the UI
-   *  appropriately. After a sign-in, the API is called.
-   */
-  function updateSigninStatus(isSignedIn) {
-    if (isSignedIn) {
-      //authorizeButton.style.display = 'none';
-      //signoutButton.style.display = 'block';
-      console.log(data);
-      //postToSheetsAPI(data);
-      //getSheetData('CATEGORIES', listCategories);
-    } else {
-      //postToSheetsAPI(data);
-      //authorizeButton.style.display = 'block';
-      //signoutButton.style.display = 'none';
-    }
-  }
-
-  /**
-   *  Sign in the user upon button click.
-   */
-  function handleAuthClick(event) {
-    gapi.auth2.getAuthInstance().signIn();
-  }
-
-  /**
-   *  Sign out the user upon button click.
-   */
-  function handleSignoutClick(event) {
-    gapi.auth2.getAuthInstance().signOut();
-  }
-
-  /**
-   * Append a pre element to the body containing the given message
-   * as its text node. Used to display the results of the API call.
-   *
-   * @param {string} message Text to be placed in pre element.
-   */
-  function appendPre(message) {
-    var pre = document.getElementById('content');
-    var textContent = document.createTextNode(message + '\n');
-    console.log('appendPre() ' + textContent);
   }
 
   /**
@@ -91,10 +46,11 @@
    * @param sheetRange to retrieve data from
    *
    */
-  function getSheetData(sheet, callback){
+  function getSheetData(sheetRange, callback){
+
     gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: theSpreadSheet,
-      range: sheet,
+      spreadsheetId: SPREADSHEET_ID,
+      range: sheetRange,
     }).then(function(response) {
       var range = response.result;
       if (range.values.length > 0) {
@@ -109,17 +65,7 @@
     });
   }
 
-  /**
-   *
-   * @param
-   */
-  function listCategories(range) {
-    for (i = 0; i < range.values.length; i++) {
-      var row = range.values[i];
-      // Print columns A and E, which correspond to indices 0 and 4.
-      console.log(row[0] + ', ' + row[1]);
-    }
-  }
+
 /**
  * Loads and Initializes Google APIs javascript library
  *
@@ -140,7 +86,7 @@ function loadAndInitializeGAPI() {
   	document.body.appendChild(gapiScript);
 }
 /**
- *
+ * Posts to sheets API
  * @param data
  * @param oauth2Client
  */
@@ -148,7 +94,7 @@ function postToSheetsAPI(values, sheetRange='PROJECTS'){
 
   var params = {
      // The ID of the spreadsheet to update.
-     spreadsheetId: theSpreadSheet,
+     spreadsheetId: SPREADSHEET_ID,
      // The A1 notation of a range to search for a logical table of data.
      // Values will be appended after the last row of the table.
      range: sheetRange,
@@ -163,14 +109,14 @@ function postToSheetsAPI(values, sheetRange='PROJECTS'){
 
   var request = gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody);
   request.then(function(response) {
-    // TODO: Change code below to process the `response` object:
-    console.log(response.result);
-    return response;
+    //console.log(response.result);
+    bootbox.alert('Add successful!');
   }, function(reason) {
     console.error('error: ' + reason.result.error.message);
-    return reason;
+    bootbox.alert(reason.result.error.message);
   });
 }
+
 
 window.addEventListener('load', function () {
   authorizeButton = $('.btn-add-project-form');

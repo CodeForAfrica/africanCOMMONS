@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Code for Sierra Leone
 countries: Sierra Leone
-category: Not-for-profit
+category: Non Profit
 site_url: https://codeforsierraleone.org
 github_url: https://github.com/Code4SierraLeone
 related: 

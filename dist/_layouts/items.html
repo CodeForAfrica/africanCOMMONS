@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign categories = site.data.categories | where:'Type', page.type %}
+{% assign categories = site.data.categories | where:'Type', page.category_type %}
 {% assign items = site.collections | where:'label', page.type | first %}
 
 {% if page.type == 'projects' %}
@@ -13,7 +13,7 @@ layout: default
       {% for review in site.reviews limit:4 %}
         {% assign project = site.projects | where: "slug", review.slug | first %}
         <div class="card text-white bg-primary mb-3 pt-3">
-          <div class="card-body d-flex flex-column justify-content-center">
+          <div class="card-body d-flex flex-column">
             <h4 class="card-title">{{ project.title }}</h4>
             <p class="card-text">{{ project.description }}</p>
           </div>
@@ -38,11 +38,9 @@ layout: default
   <h1 class="text-center mb-4 mt-5">All {{ page.type | capitalize }}</h1>
   <div class="border border-right-0 border-left-0 py-1 text-center">
     {% for category in categories %}
-      {% if category.Type == page.type %}
-        <a href="#{{ category.Title | slugify }}" class="btn btn-sm m-2 btn-outline-primary category-btn">
-          {{ category.Title }}
-        </a>
-      {% endif %}
+      <a href="#{{ category.Title | slugify }}" class="btn btn-sm m-2 btn-outline-primary category-btn">
+        {{ category.Title }}
+      </a>
     {% endfor %}
   </div>
 

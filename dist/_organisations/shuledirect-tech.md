@@ -4,9 +4,9 @@ body_class: item
 title: ShuleDirect Tech
 countries: Tanzania
 category: Educational
-site_url: https://www.shuledirect.co.tz
+site_url: http://shuledirect.info
 github_url: https://github.com/ShuleDirectTech
-related: http://shuledirect.info
+related: 
 description: >
-  An online platform that provides educational learning content for students and teachers in Tanzanian secondary schools.
+  An organisation that provides mobile educational learning content for students and teachers in Tanzanian secondary schools via mobile app, desktop learning, and SMS.
 ---

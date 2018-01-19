@@ -1,12 +1,14 @@
 ---
 layout: item
 body_class: item
-title: Taarifa Waterpoints
+title: Tanzania Waterpoints
+origin: Tanzania
 countries: Tanzania
 category: Service Delivery
 site_url: http://dashboard.taarifa.org/#/dashboard
 github_url: https://github.com/taarifa/TaarifaWaterpoints
 related: 
+organisations: 
 description: >
-  The Taarifa Platform is an open source web API, designed to close citizen feedback loops.
+  Dashboard built on the Taarifa Platform to monitor waterpoints in Tanzania
 ---
