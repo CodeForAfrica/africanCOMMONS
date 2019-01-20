@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Uganda Parliament Watch
 countries: Uganda
-category: Civil Society
+category: Non Profit
 site_url: http://parliamentwatch.ug
 github_url: 
 related: 

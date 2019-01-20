@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Omidyar Network
 countries: 
-category: Multinational
+category: Donor / Investor
 site_url: 
 github_url: 
 related: 

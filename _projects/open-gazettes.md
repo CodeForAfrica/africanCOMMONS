@@ -4,11 +4,11 @@ body_class: item
 title: Open Gazettes
 origin: South Africa
 countries: South Africa
-category: Governance
+category: Transparency
 site_url: https://opengazettes.org.za/
 github_url: https://github.com/OpenUpSA/opengazettes
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   Biggest collection of freely available gazettes in South Africa
 ---

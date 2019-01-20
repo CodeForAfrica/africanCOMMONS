@@ -1,0 +1,22 @@
+Title,Description,Types
+Crisis Response,Tools created to help mobilize aid or track events as they unfold during crisis situations in a country or community e.g. [Ushahidi] (https://www.ushahidi.com/),"Conflict
+Migration
+Natural Disaster"
+Education,Educational institutions like universities or groups that have created tools for citizens and school-going children to easily access educational information e.g Tanzania's [ShuleDirect](https://www.shuledirect.co.tz).,
+Governance,Tools created to increase citizen participation in governance of their countries or communities and keep governing bodies in check e.g. Code for Kenya's [Tax Clock] (https://taxclock.codeforkenya.org/),"Accountability
+Civic Engagement
+Elections
+Service Delivery
+Finance"
+Health,Organizations that specialize in aiding delivery of vital health services and provide citizens with knowledge of health service providers e.g Code for Tanzania's [Hospital Locator](http://htools-tz-health-facilities.dokku-1.codefortanzania.org).,
+Natural Resources,"Tools used to map for risk and monitor change for environmental change e.g [Code for Africa's Climate Change Projections](https://climatechange.codeforafrica.org/map.html).
+","Agriculture
+Climate
+Conservation
+Extractives
+Land
+Renewables"
+Transparency,"Tools used to promote citizen reporting, and fact checking/ verification of news information e.g Code for Africa's [Citizen Reporter](http://citizenreporter.codeforafrica.net) mobile app.
+","Access to Information
+Media
+Fact-Checking"

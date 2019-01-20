@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Tanzania Open Data Portal
 countries: Tanzania
-category: Government
+category: Public Agency
 site_url: http://www.opendata.go.tz
 github_url: 
 related: 

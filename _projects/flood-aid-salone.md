@@ -7,8 +7,8 @@ countries: Sierra Leone
 category: Crisis Response
 site_url: 
 github_url: https://github.com/Code4SierraLeone/floodaidsalone-platform-api
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   An Ushahidi-based project that was used to map out crowd sourced information about damage to infrastructure and missing person reports during the 2017 August Freetown Flash Floods
 ---

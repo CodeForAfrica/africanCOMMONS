@@ -4,11 +4,11 @@ body_class: item
 title: Tanzania Waterpoints
 origin: Tanzania
 countries: Tanzania
-category: Service Delivery
+category: Governance
 site_url: http://dashboard.taarifa.org/#/dashboard
 github_url: https://github.com/taarifa/TaarifaWaterpoints
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   Dashboard built on the Taarifa Platform to monitor waterpoints in Tanzania
 ---

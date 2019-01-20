@@ -4,11 +4,11 @@ body_class: item
 title: Taarifa Platform
 origin: 
 countries: Tanzania
-category: Service Delivery
+category: Governance
 site_url: http://taarifa.org
 github_url: https://github.com/taarifa/TaarifaAPI
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   The Taarifa Platform is an open source web API, designed to close citizen feedback loops.
 ---

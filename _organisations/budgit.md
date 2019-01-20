@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: BudgIT
 countries: Nigeria
-category: ICT
+category: Social Enterprise
 site_url: yourbudgit.com
 github_url: 
 related: 

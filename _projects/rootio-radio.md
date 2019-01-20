@@ -1,14 +1,14 @@
 ---
 layout: item
 body_class: item
-title: Rootio Radio
+title: RootIO Radio
 origin: Uganda
 countries: Uganda
-category: Service Delivery
+category: Governance
 site_url: http://rootio.org
 github_url: https://github.com/rootio/rootio_web
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   A grassroots radio project for low-cost hyperlocal broadcasting currently running in Northern Uganda
 ---

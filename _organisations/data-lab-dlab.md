@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Data Lab (dLAB)
 countries: Tanzania
-category: ICT
+category: Public Agency
 site_url: http://www.dlab.or.tz
 github_url: https://github.com/dlab-tz
 related: 

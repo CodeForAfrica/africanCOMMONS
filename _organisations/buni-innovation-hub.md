@@ -1,9 +1,9 @@
 ---
 layout: item
 body_class: item
-title: Buni Hub
+title: Buni Innovation Hub
 countries: Tanzania
-category: ICT
+category: Social Enterprise
 site_url: http://buni.or.tz
 github_url: 
 related: 

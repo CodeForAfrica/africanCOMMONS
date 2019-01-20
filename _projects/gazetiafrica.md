@@ -7,8 +7,8 @@ countries: Kenya, Nigeria, Sierra Leone
 category: Governance
 site_url: https://gazeti.africa
 github_url: https://github.com/gazeti
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   Africa's largest largest freely searchable collection of gazettes.
 ---

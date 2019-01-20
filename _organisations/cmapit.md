@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: cMapIT
 countries: Nigeria
-category: ICT
+category: Social Enterprise
 site_url: https://cmapit.com
 github_url: https://github.com/cmapithub
 related: 

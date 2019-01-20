@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: OpenHIE
 countries: Rwanda, South Africa, Sierra Leone, Tanzania
-category: Multinational
+category: Non Profit
 site_url: https://ohie.org
 github_url: 
 related: 

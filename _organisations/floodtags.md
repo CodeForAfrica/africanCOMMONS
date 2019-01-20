@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: FloodTags
 countries: 
-category: ICT
+category: Social Enterprise
 site_url: https://www.floodtags.com
 github_url: 
 related: https://dashboard.floodtags.com

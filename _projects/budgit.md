@@ -7,8 +7,8 @@ countries: Nigeria, Ghana, Sierra Leone
 category: Governance
 site_url: http://yourbudgit.com
 github_url: http://yourbudgit.com/data/
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   Simplifies budget and matters of public spending for citizens
 ---

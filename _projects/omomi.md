@@ -7,8 +7,8 @@ countries: Nigeria
 category: Health
 site_url: http://omomiapp.com
 github_url: https://github.com/omomi
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   A mobile solution that helps parents keep track of their children's health and immunization status, manage health problems at home, and connect with medical practitioners and other parents online.
 ---

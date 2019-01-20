@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Vizzuality
 countries: Kenya
-category: ICT
+category: Social Enterprise
 site_url: http://www.vizzuality.com
 github_url: https://github.com/Vizzuality
 related: 
