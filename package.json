@@ -1,6 +1,6 @@
 {
   "name": "africancommons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A platform to showcase re-useable tools built across Africa and the people & organizations building them.",
   "main": "src/js/main.js",
   "bin": {},
@@ -8,7 +8,7 @@
     "test": "standard",
     "build": "webpack --progress --optimize-minimize -p",
     "watch": "webpack --progress --optimize-minimize --watch",
-    "serve": "webpack-dev-server --open",
+    "serve": "jekyll s -s dist",
     "commons": "node bin/commons.js"
   },
   "repository": "git+https://github.com/CodeForAfrica/africanCOMMONS.git",
