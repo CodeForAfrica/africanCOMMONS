@@ -4,11 +4,11 @@ body_class: item
 title: MaoniApp
 origin: Tanzania
 countries: Tanzania
-category: Service Delivery
+category: Transparency
 site_url: http://vast-dusk-72215.herokuapp.com
 github_url: https://github.com/josephmtinangi/maoni-app
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
-  A tool that looks at how much Tanzanian households pay their domestic workers and uses this to determine whether the workers can in return sustain their own households.
+  An app that can be used to track and manage feedback and complaints in institutions.
 ---

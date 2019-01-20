@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: ShuleDirect Tech
 countries: Tanzania
-category: Educational
+category: Social Enterprise
 site_url: http://shuledirect.info
 github_url: https://github.com/ShuleDirectTech
 related: 

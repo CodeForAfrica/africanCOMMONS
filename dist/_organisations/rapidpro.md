@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: RapidPro
 countries: Rwanda
-category: ICT
+category: Social Enterprise
 site_url: https://community.rapidpro.io/about-rapidpro/
 github_url: https://github.com/rapidpro
 related: 

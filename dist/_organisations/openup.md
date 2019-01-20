@@ -1,7 +1,7 @@
 ---
 layout: item
 body_class: item
-title: OpenUpSA
+title: OpenUp
 countries: South Africa
 category: Non Profit
 site_url: https://openup.org.za

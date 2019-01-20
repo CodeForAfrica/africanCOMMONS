@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: OpenMRS
 countries: Kenya, Rwanda, Mozambique
-category: ICT
+category: Non Profit
 site_url: http://openmrs.org
 github_url: https://github.com/openmrs
 related: 

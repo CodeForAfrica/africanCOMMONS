@@ -3,7 +3,7 @@ africanCOMMONS
 
 _A platform to showcase re-useable tools built across Africa and the people & organizations building them. Accessible at https://commons.africa/_
 
-[![Build Status](https://travis-ci.org/CodeForAfrica/commons.AFRICA.svg)](https://travis-ci.org/CodeForAfrica/commons.AFRICA)
+[![Build Status](https://travis-ci.org/CodeForAfrica/africanCOMMONS.svg)](https://travis-ci.org/CodeForAfrica/africanCOMMONS)
 
 Why is everyone reinventing the wheel? Massive amounts of money and time are being wasted on rebuilding solutions for digital democracies and open data. africanCOMMONS showcases carefully selected best-of-breed open source civic technologies that have already been ‘battle tested’ elsewhere, for possible re-use in countries across the continent.
 
@@ -30,13 +30,13 @@ yarn
 From inside the root directory;
 
 1. Serve using Jekyll;
-```sh
+```shell
 $ jekyll s -s dist
 ```
 
 2. On a separate terminal window, watch for JS/CSS changes using Webpack;
-```sh
-$ yarn run watch
+```shell
+$ yarn watch
 ```
 
 
@@ -44,25 +44,23 @@ $ yarn run watch
 
 To update the projects:
 
-```sh
-$ yarn run commons --download
+```shell
+$ yarn commons download && yarn commons
 ```
 
-If you don't want to download, can leave out the `--download` flag/argument.
+Data sources:
 
-After updating the data, push the repository and the raw users data will be available at:
-
-```
-https://raw.githubusercontent.com/CodeForAfrica/commons.AFRICA/develop/dist/_data/users.csv
-```
+- Projects and organisations - [`https://docs.google.com/spreadsheets/d/1GykfqSTxxhXbzszjOrBFuWNruqDXBNiDQNHNpT8Mn4k/edit#gid=0`](https://docs.google.com/spreadsheets/d/1GykfqSTxxhXbzszjOrBFuWNruqDXBNiDQNHNpT8Mn4k/edit#gid=0)
+- Reviews -  [`dist/_reviews`](dist/_reviews)
+- Users - [`https://github.com/CodeForAfricaLabs/github-africa`](https://github.com/CodeForAfricaLabs/github-africa)
 
 
 ## Deployment
 
-Currently we deploy using [Github pages](http://pages.github.com/). To publish, run:
+Currently we deploy using [Github pages](http://pages.github.com/):
 
-```sh
-$ yarn run commons --publish
+```shell
+$ yarn commons deploy
 ```
 
 ## Contributing
@@ -73,13 +71,13 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more on this.
 
 To run style guide tests, you can run
 
-```sh
-$ yarn run stardard
+```shell
+$ yarn test
 ```
 
 ---
 
-### License
+## License
 
 The MIT License (MIT)
 

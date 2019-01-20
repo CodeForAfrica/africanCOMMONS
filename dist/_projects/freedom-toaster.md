@@ -3,12 +3,12 @@ layout: item
 body_class: item
 title: Freedom Toaster
 origin: South Africa
-countries: 
-category: 
+countries: South Africa
+category: Transparency
 site_url: 
 github_url: https://github.com/ShuttleworthFoundation/FreedomToaster_v0.1
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   
 ---

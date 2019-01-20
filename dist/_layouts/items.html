@@ -2,7 +2,12 @@
 layout: default
 ---
 
-{% assign categories = site.data.categories | where:'Type', page.category_type %}
+{% if page.type == 'projects' %}
+{% assign categories = site.data.categories-projects %}
+{% else %}
+{% assign categories = site.data.categories-organisations %}
+{% endif %}
+
 {% assign items = site.collections | where:'label', page.type | first %}
 
 {% if page.type == 'projects' %}

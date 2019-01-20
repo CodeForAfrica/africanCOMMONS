@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Moving Gauteng
 countries: South Africa
-category: 
+category: Non Profit
 site_url: https://movinggauteng.co.za
 github_url: https://github.com/movinggauteng
 related: 

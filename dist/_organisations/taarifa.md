@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Taarifa
 countries: Tanzania
-category: ICT
+category: Social Enterprise
 site_url: http://taarifa.org
 github_url: https://github.com/taarifa
 related: 

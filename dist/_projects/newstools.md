@@ -4,11 +4,11 @@ body_class: item
 title: Newstools
 origin: 
 countries: 
-category: News / Journalistic Tools
+category: Natural Resources
 site_url: 
 github_url: https://github.com/newstools
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
   Collection of scrapers for African newspapers / news sources.
 ---

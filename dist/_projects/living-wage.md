@@ -7,8 +7,8 @@ countries: Tanzania, South Africa
 category: Governance
 site_url: http://livingwages.codefortanzania.org/
 github_url: https://github.com/CodeForTanzania/Domestic-Workers
-related: 
-organisations: 
+related: undefined
+organisations: undefined
 description: >
-  Are you paying your domestic worker enough? Use the living wage calculator to check if you are paying a livable wage in Tanzania.
+  A tool that looks at how much Tanzanian households pay their domestic workers and uses this to determine whether the workers can in return sustain their own households.
 ---

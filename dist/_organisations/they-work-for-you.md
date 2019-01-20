@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: They Work For You
 countries: Uganda
-category: Civil Society
+category: Non Profit
 site_url: http://theyworkforyou.github.io/uganda-parliament-watch/
 github_url: https://github.com/theyworkforyou
 related: 

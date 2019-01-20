@@ -3,7 +3,7 @@ layout: item
 body_class: item
 title: Ona
 countries: Kenya
-category: ICT
+category: Social Enterprise
 site_url: ona.io
 github_url: https://github.com/onaio
 related: 

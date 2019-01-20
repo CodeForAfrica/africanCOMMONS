@@ -7,11 +7,11 @@ var utils = require('./utils')
 
 var args = process.argv.slice(2)
 switch (args[0]) {
-  case '--download':
+  case 'download':
     download()
     break
-  case '--publish':
-    publish()
+  case 'deploy':
+    deploy()
     break
   default:
     createProjects()
@@ -24,8 +24,12 @@ function download () {
   console.log('Downloads started')
   var files = [
     {
+      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=129503185&single=true&output=csv',
+      filename: 'categories-projects.csv'
+    },
+    {
       url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=297467500&single=true&output=csv',
-      filename: 'categories.csv'
+      filename: 'categories-organisations.csv'
     },
     {
       url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4gM-ByCoxuTAlX4qtRHn05IfPgjBB_pPk6aGfjkRFhYl_IFx9__s9NUfxJKnj3HvtkIWhBvoMLLei/pub?gid=0&single=true&output=csv',
@@ -36,7 +40,7 @@ function download () {
       filename: 'organisations.csv'
     },
     {
-      url: 'https://raw.githubusercontent.com/HacksHackersAfrica/github-africa/master/step4.json',
+      url: 'https://raw.githubusercontent.com/CodeForAfricaLabs/github-africa/master/step4.json',
       filename: 'users.json'
     }
   ]
@@ -51,7 +55,7 @@ function download () {
       if (err) throw err
       console.log('Download complete - ' + path)
 
-      // TODO: Until we figure out files.pipe callback, this will be run separately.
+      // TODO: Figure out files.pipe callback so as not to have to run `yarn commons`
       // switch (path) {
       //   case options.directory + '/projects.csv':
       //     create_projects()
@@ -65,6 +69,7 @@ function download () {
       // }
     })
   }
+  console.log('IMPORTANT: Please run `yarn commons` to process downloaded files.')
 }
 
 // Create the projects' files
@@ -90,7 +95,7 @@ function createProjects () {
     content += 'title: ' + projects[i]['PROJECT NAME'] + '\n'
     content += 'origin: ' + projects[i]['ORIGIN COUNTRY'] + '\n'
     content += 'countries: ' + projects[i]['COUNTRIES WHERE DEPLOYED'] + '\n'
-    content += 'category: ' + projects[i]['CATEGORY'] + '\n'
+    content += 'category: ' + projects[i]['SECTOR'] + '\n'
     content += 'site_url: ' + projects[i]['PROJECT WEBSITE'] + '\n'
     content += 'github_url: ' + projects[i]['PROJECT GITHUB REPO'] + '\n'
     content += 'related: ' + projects[i]['RELATED PROJECTS'] + '\n'
@@ -125,13 +130,13 @@ function createOrgs () {
     content += 'layout: item\n'
     content += 'body_class: item\n'
 
-    content += 'title: ' + orgs[i].Name + '\n'
-    content += 'countries: ' + orgs[i].Country + '\n'
-    content += 'category: ' + orgs[i].Category + '\n'
-    content += 'site_url: ' + orgs[i].Url + '\n'
-    content += 'github_url: ' + orgs[i].Github + '\n'
-    content += 'related: ' + orgs[i].Related + '\n'
-    content += 'description: >\n  ' + orgs[i].Description.replace('\n', '\n  ') + '\n'
+    content += 'title: ' + orgs[i]['Name'] + '\n'
+    content += 'countries: ' + orgs[i]['Country'] + '\n'
+    content += 'category: ' + orgs[i]['Entity Type'] + '\n'
+    content += 'site_url: ' + orgs[i]['Url'] + '\n'
+    content += 'github_url: ' + orgs[i]['Github'] + '\n'
+    content += 'related: ' + orgs[i]['Related'] + '\n'
+    content += 'description: >\n  ' + orgs[i]['Description'].replace('\n', '\n  ') + '\n'
 
     content += '---\n'
 
@@ -141,7 +146,8 @@ function createOrgs () {
   console.log('Finished processing ' + orgs.length + ' organisations.')
 }
 
-// Create Users CSV
+// Create shuffled users CSV to be processed by Jekyll
+// NOTE: Jekyll will limit the shown images to 80
 function createUsers () {
   console.log('Processing users.')
 
@@ -155,7 +161,7 @@ function createUsers () {
 
   var users = fs.readJsonSync(filePath)
 
-  // Shuffle the users for save into CSV and use in front page
+  // Shuffle the users
   users = utils.shuffleArray(users)
 
   // Save to CSV
@@ -165,7 +171,7 @@ function createUsers () {
 }
 
 // Publish to gh-pages
-function publish () {
+function deploy () {
   console.log('Starting Github Pages publish...')
   var ghpages = require('gh-pages')
   ghpages.publish('dist', function (err) {
