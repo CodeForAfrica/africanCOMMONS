@@ -9,7 +9,9 @@
     "build": "webpack --progress --optimize-minimize -p",
     "watch": "webpack --progress --optimize-minimize --watch",
     "serve": "jekyll s -s dist",
-    "commons": "node bin/commons.js"
+    "commons": "node bin/commons.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "git+https://github.com/CodeForAfrica/africanCOMMONS.git",
   "keywords": [
@@ -36,7 +38,8 @@
     "popper.js": "^1.12.9",
     "standard": "^11.0.0",
     "standard-loader": "^6.0.1",
-    "vanilla-sharing": "^3.0.2"
+    "vanilla-sharing": "^3.0.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -52,5 +55,6 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "webpack": "^3.10.0"
-  }
+  },
+  "snyk": true
 }
